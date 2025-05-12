@@ -1,9 +1,9 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, when, avg, sum, count, desc, year, month
 
-# Importa validações e carregamento via Spark
-from src.extract.extract_clients import extrair_e_validar_clientes
-from src.extract.extract_transacoes import extrair_transacoes_spark, validar_transacoes_csv
+# Imports da camada de extração
+from src.extract.extract_clients import extrair_e_validar_clientes, extrair_clientes_spark
+from src.extract.extract_transacoes import validar_transacoes_csv, extrair_transacoes_spark
 
 def main():
     # 1. Iniciar sessão Spark
@@ -11,21 +11,21 @@ def main():
         .appName("AnaliseTransacoesLiveCoding") \
         .getOrCreate()
 
-    # 2. Valida os arquivos com Pandas antes de carregar no Spark
-    extrair_e_validar_clientes()
-    validar_transacoes_csv()
+    # 2. Validação com pandas
+    extrair_e_validar_clientes()        # valida estrutura e unicidade
+    validar_transacoes_csv()            # valida estrutura e datas
 
-    # 3. Carregar os dados no Spark
-    df_clientes = extrair_e_validar_clientes(spark)
+    # 3. Leitura dos dados com Spark
+    df_clientes = extrair_clientes_spark(spark)
     df_transacoes = extrair_transacoes_spark(spark)
 
-    # 4. Transformações no DataFrame de transações
+    # 4. Enriquecimento do DataFrame de transações
     df_transacoes = df_transacoes \
         .withColumnRenamed("valor", "valor_reais") \
         .withColumn("ano", year(col("data"))) \
         .withColumn("mes", month(col("data")))
 
-    # 5. Criar coluna categórica no DataFrame de clientes
+    # 5. Categorização por faixa etária
     df_clientes = df_clientes.withColumn(
         "faixa_etaria",
         when(col("idade") < 30, "jovem")
@@ -33,13 +33,13 @@ def main():
         .otherwise("idoso")
     )
 
-    # 6. Realizar JOIN
+    # 6. JOIN entre clientes e transações
     df_join = df_transacoes.join(df_clientes, on="id_cliente", how="inner")
 
-    # 7. Filtrar transações de alto valor
+    # 7. Filtragem de alto valor
     df_alto_valor = df_join.filter(col("valor_reais") > 500)
 
-    # 8. Agrupar por categoria e calcular métricas
+    # 8. Métricas por categoria
     df_agg_categoria = df_join.groupBy("categoria") \
         .agg(
             avg("valor_reais").alias("media_valor"),
@@ -58,9 +58,8 @@ def main():
         .orderBy(desc("total_cliente")) \
         .limit(10)
 
-    # 11. Criar view temporária e executar SQL
+    # 11. Consulta SQL
     df_join.createOrReplaceTempView("vw_transacoes")
-
     df_sql = spark.sql("""
         SELECT ano, mes, estado, faixa_etaria,
                COUNT(*) AS total_transacoes,
@@ -70,7 +69,7 @@ def main():
         ORDER BY ano DESC, mes DESC, total_gasto DESC
     """)
 
-    # 12. Mostrar os resultados
+    # 12. Resultados
     print("🔹 Visão por categoria:")
     df_agg_categoria.show()
 

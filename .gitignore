@@ -3,3 +3,9 @@
 .venv
 env/
 venv/
+
+# Bytecode e cache do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
