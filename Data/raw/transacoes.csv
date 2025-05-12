@@ -1,0 +1,1001 @@
+id_transacao,id_cliente,data,valor,categoria,cidade
+1,58,2025-01-12,34.76,vestuario,Alves
+2,126,2025-02-20,230.98,mercado,da Cruz de Goiás
+3,280,2024-07-02,96.07,farmacia,Rocha
+4,17,2025-02-20,39.5,eletronico,Pastor
+5,120,2024-10-19,510.3,mercado,Alves
+6,288,2024-06-14,206.85,restaurante,da Conceição
+7,215,2024-11-21,228.24,restaurante,Novais
+8,143,2024-07-25,811.34,mercado,Câmara dos Dourados
+9,82,2024-12-23,701.16,vestuario,Abreu da Serra
+10,143,2025-02-04,163.92,vestuario,Fernandes Paulista
+11,53,2024-07-08,101.82,mercado,Teixeira
+12,184,2024-09-16,849.02,restaurante,Borges
+13,136,2024-10-03,809.06,farmacia,Fogaça
+14,275,2025-04-03,133.58,farmacia,Pereira Paulista
+15,41,2025-03-18,556.52,restaurante,Siqueira
+16,186,2024-11-03,581.58,mercado,Garcia
+17,24,2024-06-08,664.65,vestuario,Pires da Praia
+18,41,2024-12-19,856.76,mercado,Santos
+19,195,2024-06-05,285.19,vestuario,Ribeiro
+20,84,2024-08-05,376.48,eletronico,Barros de Goiás
+21,137,2025-04-10,704.8,mercado,Garcia
+22,88,2024-08-24,538.8,eletronico,Porto de Fonseca
+23,84,2024-07-11,467.64,vestuario,Fogaça do Oeste
+24,286,2025-01-24,227.42,vestuario,Sampaio de Minas
+25,29,2024-12-31,236.76,mercado,Nascimento
+26,162,2025-02-16,407.15,mercado,Castro
+27,109,2024-11-04,914.0,restaurante,da Mata da Prata
+28,162,2024-08-02,220.5,farmacia,Vargas do Norte
+29,203,2024-08-05,885.84,farmacia,Dias
+30,74,2024-10-11,272.23,eletronico,Azevedo do Oeste
+31,288,2025-04-28,543.59,restaurante,Cunha do Amparo
+32,220,2024-10-09,898.84,farmacia,Casa Grande de da Luz
+33,186,2024-07-02,227.13,eletronico,Souza
+34,261,2024-12-13,498.58,mercado,Souza Verde
+35,57,2024-10-22,161.31,eletronico,Fonseca de Goiás
+36,217,2024-07-01,600.44,farmacia,Borges de Sá
+37,196,2024-05-27,599.93,farmacia,Cassiano
+38,271,2025-01-07,258.9,restaurante,Vieira
+39,6,2025-01-28,683.48,mercado,Peixoto de Minas
+40,275,2024-10-05,753.37,vestuario,Peixoto dos Dourados
+41,58,2024-11-30,300.57,eletronico,Novaes do Sul
+42,233,2025-01-28,13.21,vestuario,Rodrigues
+43,257,2025-04-17,764.34,restaurante,Vargas Alegre
+44,55,2024-06-21,871.81,vestuario,Lopes da Serra
+45,260,2024-11-01,612.88,eletronico,Silveira
+46,192,2025-04-14,764.89,restaurante,Montenegro da Serra
+47,272,2024-11-22,919.31,restaurante,Pires
+48,166,2024-09-01,493.72,mercado,Cassiano
+49,186,2024-10-01,879.93,vestuario,Nogueira
+50,123,2025-03-07,67.35,restaurante,Peixoto
+51,41,2024-09-11,94.8,farmacia,Almeida de Camargo
+52,36,2025-05-04,978.2,restaurante,das Neves de Goiás
+53,65,2024-05-31,137.11,farmacia,Nunes
+54,282,2024-06-08,173.48,restaurante,Siqueira
+55,217,2024-11-13,964.72,restaurante,Teixeira
+56,103,2024-12-01,715.82,farmacia,Cardoso
+57,192,2025-01-20,443.72,restaurante,Novaes de Cavalcante
+58,232,2024-08-19,129.79,eletronico,Cunha da Prata
+59,33,2025-02-26,344.7,restaurante,Silva
+60,284,2024-09-07,237.81,eletronico,Rios da Praia
+61,4,2024-10-26,80.28,mercado,Campos de da Cruz
+62,118,2024-08-04,76.73,mercado,Fernandes
+63,170,2024-05-17,80.15,eletronico,Pastor
+64,143,2024-08-02,672.29,eletronico,Barbosa
+65,277,2025-02-07,140.99,restaurante,da Conceição
+66,296,2024-06-04,477.94,farmacia,Farias
+67,209,2024-06-05,198.51,mercado,da Mota
+68,221,2025-01-23,360.75,farmacia,Cunha de Nogueira
+69,240,2024-06-29,865.2,mercado,da Cruz de Viana
+70,51,2024-11-08,70.01,vestuario,Correia do Campo
+71,56,2024-06-15,256.17,eletronico,Fogaça das Pedras
+72,275,2024-10-15,454.13,farmacia,Siqueira de Aragão
+73,94,2025-01-25,285.76,eletronico,Araújo
+74,39,2024-10-12,448.7,restaurante,Caldeira de Goiás
+75,51,2024-07-22,60.08,restaurante,Nascimento
+76,8,2024-10-30,969.31,eletronico,Lima
+77,86,2024-07-19,412.35,farmacia,Martins de Goiás
+78,110,2025-04-13,866.0,mercado,Macedo
+79,85,2025-03-18,385.18,farmacia,Aragão
+80,136,2025-01-17,927.25,farmacia,Borges
+81,147,2025-05-03,428.78,restaurante,Cavalcante
+82,250,2024-10-13,163.25,vestuario,Mendes de Cunha
+83,112,2025-04-09,969.02,restaurante,Araújo da Serra
+84,278,2024-10-03,70.35,vestuario,Gomes
+85,30,2024-08-19,59.64,farmacia,da Paz de Lima
+86,258,2025-02-03,920.19,restaurante,Cassiano de Correia
+87,81,2024-09-01,66.31,restaurante,Araújo
+88,42,2024-12-19,852.83,mercado,Souza
+89,35,2024-09-07,678.46,eletronico,Aragão
+90,207,2024-12-21,128.69,restaurante,Montenegro de Moura
+91,127,2024-07-09,583.13,mercado,Moraes
+92,42,2024-06-09,425.03,restaurante,Azevedo
+93,290,2024-12-26,527.55,vestuario,Rocha
+94,105,2025-04-08,673.03,vestuario,Guerra
+95,123,2024-06-24,272.96,eletronico,Pacheco
+96,154,2024-12-25,462.65,mercado,Pinto
+97,5,2024-06-09,463.7,restaurante,Ribeiro Verde
+98,52,2024-12-14,82.53,eletronico,da Luz do Oeste
+99,260,2025-01-24,272.55,vestuario,da Costa Paulista
+100,36,2024-10-09,880.48,vestuario,Rios
+101,146,2025-01-14,166.17,restaurante,Marques Alegre
+102,155,2025-05-04,615.56,restaurante,Albuquerque
+103,5,2024-11-02,671.18,restaurante,Barbosa
+104,154,2024-12-03,932.44,mercado,Montenegro
+105,69,2024-08-19,271.82,mercado,Ferreira
+106,284,2025-04-16,163.89,vestuario,da Cruz
+107,108,2024-09-29,720.44,eletronico,Castro dos Dourados
+108,136,2025-03-28,510.35,vestuario,Pimenta do Galho
+109,27,2024-05-12,101.38,farmacia,Ribeiro do Campo
+110,142,2025-05-08,53.65,vestuario,da Luz
+111,67,2024-06-22,640.74,vestuario,Souza
+112,83,2024-12-09,743.82,restaurante,da Mata
+113,219,2024-08-26,565.3,mercado,Silva
+114,39,2024-09-19,945.6,eletronico,Rodrigues
+115,280,2025-01-10,45.67,vestuario,Montenegro do Amparo
+116,299,2024-08-14,557.0,farmacia,Borges
+117,66,2025-01-10,51.41,vestuario,da Mota do Norte
+118,21,2024-05-10,899.94,eletronico,Vargas Grande
+119,128,2025-01-11,670.26,vestuario,Castro dos Dourados
+120,287,2024-12-09,885.29,farmacia,Novais do Sul
+121,80,2024-06-21,926.51,eletronico,Sales
+122,84,2025-04-25,976.44,eletronico,Nogueira
+123,212,2024-05-22,34.54,vestuario,Pacheco da Prata
+124,211,2024-07-05,804.21,eletronico,Cardoso do Norte
+125,137,2024-09-05,167.61,mercado,Vieira do Norte
+126,196,2025-04-23,873.45,farmacia,Costela de Goiás
+127,114,2025-01-23,207.58,farmacia,Fogaça
+128,180,2025-03-07,312.14,eletronico,Pinto Grande
+129,115,2025-05-03,33.43,eletronico,Castro
+130,205,2025-03-15,334.98,mercado,Jesus
+131,143,2024-05-18,357.63,restaurante,Sousa
+132,205,2025-05-03,682.72,restaurante,Viana das Pedras
+133,170,2025-03-16,939.84,mercado,da Mata
+134,134,2024-07-09,186.78,vestuario,Garcia
+135,20,2025-04-12,117.32,farmacia,Melo
+136,177,2024-08-03,731.26,vestuario,Marques
+137,224,2024-09-21,610.15,restaurante,Vieira de Goiás
+138,60,2024-08-03,391.34,restaurante,Ribeiro
+139,98,2024-07-23,262.18,farmacia,Farias Paulista
+140,1,2025-04-09,524.72,restaurante,Vargas
+141,101,2024-08-25,370.58,mercado,Ramos do Galho
+142,170,2024-10-11,626.92,mercado,Alves do Campo
+143,154,2025-04-14,512.05,farmacia,Cavalcanti Verde
+144,168,2024-08-20,408.38,vestuario,Caldeira
+145,284,2024-12-26,136.01,farmacia,Ferreira Alegre
+146,195,2024-10-25,680.54,eletronico,Gomes
+147,292,2025-04-23,307.94,restaurante,da Cunha
+148,1,2024-05-26,310.84,eletronico,Abreu do Galho
+149,221,2025-05-03,787.9,restaurante,Fonseca
+150,165,2024-10-23,470.34,farmacia,Rios
+151,110,2025-05-01,516.06,eletronico,Pinto Alegre
+152,44,2025-01-21,290.95,restaurante,Silveira
+153,172,2025-04-23,102.45,eletronico,Montenegro da Mata
+154,159,2025-01-22,232.39,eletronico,Duarte das Flores
+155,76,2025-02-03,34.18,eletronico,Novaes Grande
+156,244,2024-07-22,615.16,mercado,Rios das Flores
+157,234,2025-01-27,420.3,restaurante,Pimenta
+158,100,2024-12-16,721.16,farmacia,Guerra da Prata
+159,254,2025-03-28,405.66,eletronico,da Rosa
+160,3,2024-08-28,893.73,mercado,Lopes
+161,218,2025-03-10,226.65,restaurante,Martins dos Dourados
+162,238,2024-10-27,59.72,eletronico,Moraes
+163,63,2024-11-08,461.9,farmacia,Ribeiro
+164,272,2024-06-10,988.01,restaurante,Moraes Alegre
+165,163,2024-06-14,950.54,farmacia,Rocha
+166,259,2024-09-06,432.47,restaurante,Costa
+167,229,2024-07-05,898.24,farmacia,Aparecida
+168,231,2024-08-12,266.6,eletronico,Pimenta de Vargas
+169,142,2024-06-06,768.16,restaurante,Leão de Pires
+170,249,2024-12-18,630.48,vestuario,Silva
+171,226,2025-02-03,86.71,vestuario,Monteiro das Flores
+172,121,2024-08-11,279.0,vestuario,Rezende
+173,277,2025-01-31,89.77,eletronico,Sá
+174,119,2025-04-08,389.2,eletronico,Vasconcelos
+175,110,2024-10-21,73.59,farmacia,Cavalcanti
+176,170,2025-03-17,547.19,farmacia,Aragão de Novais
+177,32,2024-08-13,214.77,farmacia,Marques
+178,200,2024-06-29,905.79,restaurante,Rios de Moura
+179,11,2024-12-12,858.16,restaurante,Sá dos Dourados
+180,195,2025-01-01,482.21,vestuario,Novaes dos Dourados
+181,153,2025-04-22,755.94,farmacia,Souza
+182,276,2025-04-08,750.04,restaurante,Machado de da Luz
+183,113,2025-02-24,493.35,vestuario,Porto
+184,224,2024-08-24,490.79,farmacia,Pires de da Costa
+185,173,2024-08-23,672.18,farmacia,Barbosa de Silva
+186,85,2024-08-27,842.1,eletronico,da Mata
+187,274,2024-09-16,36.7,farmacia,Nogueira de Minas
+188,289,2024-07-01,666.37,mercado,da Conceição
+189,220,2024-10-04,144.34,farmacia,Santos
+190,94,2024-07-31,59.78,farmacia,Leão
+191,168,2024-10-14,219.54,vestuario,Nogueira dos Dourados
+192,173,2024-10-17,763.62,farmacia,Costela
+193,143,2025-03-28,754.49,farmacia,Gomes Verde
+194,130,2025-02-03,836.56,farmacia,Teixeira
+195,10,2024-12-18,751.53,mercado,Mendes do Sul
+196,180,2024-09-22,231.98,mercado,Sá das Flores
+197,21,2025-04-05,756.69,eletronico,Nascimento da Prata
+198,103,2025-03-15,840.84,restaurante,Mendonça
+199,79,2024-08-02,246.16,farmacia,Lopes do Amparo
+200,59,2024-05-20,568.33,eletronico,Fernandes das Flores
+201,239,2025-02-14,702.47,vestuario,Martins
+202,86,2025-05-01,609.83,mercado,Pinto
+203,84,2024-12-02,965.07,mercado,Gonçalves
+204,297,2024-12-24,35.42,vestuario,Barros
+205,295,2025-01-13,680.57,farmacia,Carvalho dos Dourados
+206,204,2024-07-18,942.06,eletronico,da Luz
+207,39,2024-10-03,596.18,eletronico,Cunha dos Dourados
+208,53,2024-09-12,700.22,vestuario,Teixeira das Flores
+209,62,2024-08-25,798.26,restaurante,da Cunha de Minas
+210,22,2024-11-07,353.73,farmacia,Souza
+211,190,2024-12-04,78.27,vestuario,Ferreira
+212,7,2024-08-04,851.08,farmacia,Vasconcelos
+213,55,2025-01-17,439.19,vestuario,Sá
+214,236,2024-05-21,710.24,farmacia,Costa
+215,91,2025-03-30,736.46,vestuario,Pinto
+216,276,2024-07-07,776.9,farmacia,Cardoso
+217,224,2024-11-08,827.48,restaurante,Nunes
+218,138,2024-08-01,329.08,eletronico,Sampaio de da Cunha
+219,45,2025-03-02,286.14,farmacia,Cavalcante do Campo
+220,125,2025-03-07,752.97,restaurante,das Neves
+221,195,2024-06-19,343.03,farmacia,das Neves
+222,167,2024-12-18,190.02,eletronico,Gonçalves do Oeste
+223,182,2024-06-07,799.85,vestuario,Caldeira
+224,144,2025-02-03,881.52,vestuario,Rodrigues do Campo
+225,285,2025-03-14,20.05,eletronico,Ferreira
+226,44,2024-12-01,248.94,farmacia,Ribeiro da Praia
+227,251,2024-06-04,559.62,eletronico,Albuquerque das Pedras
+228,244,2025-03-24,649.44,farmacia,Caldeira de Lopes
+229,230,2024-09-26,795.0,mercado,Santos de Cassiano
+230,151,2024-10-25,229.38,eletronico,Siqueira
+231,157,2024-11-27,667.32,vestuario,Pimenta da Prata
+232,243,2025-03-05,557.94,vestuario,Martins de Lopes
+233,218,2025-03-25,996.67,restaurante,Duarte de Goiás
+234,170,2025-03-27,358.29,farmacia,da Mota
+235,139,2025-04-16,313.56,eletronico,da Cruz de Sá
+236,62,2024-11-05,724.07,vestuario,Fernandes do Sul
+237,62,2024-11-16,745.45,eletronico,Cirino do Amparo
+238,99,2024-07-30,224.22,farmacia,da Luz Alegre
+239,142,2024-08-25,727.34,restaurante,Novais do Sul
+240,145,2024-11-25,980.71,eletronico,Barros
+241,152,2024-08-10,235.21,eletronico,Mendonça da Prata
+242,155,2025-02-27,24.01,restaurante,Sales
+243,65,2024-11-09,281.57,mercado,Machado de Vieira
+244,284,2024-05-15,299.22,eletronico,da Rocha
+245,252,2024-08-03,111.56,mercado,Sales de Goiás
+246,294,2024-09-04,291.5,farmacia,Melo da Prata
+247,226,2024-12-01,347.3,mercado,Lima da Prata
+248,130,2024-09-14,941.65,farmacia,Sampaio dos Dourados
+249,59,2024-08-22,823.89,farmacia,da Cunha de Goiás
+250,252,2024-06-24,83.34,mercado,Dias
+251,78,2024-06-24,157.71,restaurante,Correia
+252,156,2024-08-01,94.33,eletronico,da Mota de Silveira
+253,61,2024-12-23,562.49,farmacia,Brito do Oeste
+254,116,2024-09-01,777.94,farmacia,Fonseca
+255,231,2024-07-17,909.42,vestuario,Albuquerque da Prata
+256,220,2024-06-27,312.33,restaurante,Aparecida do Norte
+257,31,2024-12-09,613.53,mercado,Sampaio Grande
+258,107,2025-01-11,629.26,vestuario,Caldeira de Albuquerque
+259,42,2024-12-17,165.49,eletronico,Melo do Amparo
+260,283,2024-10-27,84.31,mercado,Cirino do Norte
+261,210,2024-08-15,456.0,restaurante,Camargo de Azevedo
+262,241,2024-10-11,298.35,eletronico,Barbosa de Oliveira
+263,148,2025-01-08,709.89,farmacia,Cassiano
+264,37,2024-07-05,690.51,vestuario,Barros de Goiás
+265,102,2024-06-24,430.89,restaurante,Pereira de Goiás
+266,116,2025-03-06,651.16,vestuario,Machado dos Dourados
+267,73,2024-09-01,80.7,eletronico,das Neves Verde
+268,158,2025-01-05,599.09,restaurante,Pimenta
+269,148,2025-02-20,444.76,farmacia,Teixeira
+270,156,2024-07-28,702.74,vestuario,da Luz
+271,257,2025-01-20,544.58,farmacia,Castro
+272,42,2024-08-10,602.06,farmacia,Novaes
+273,166,2024-06-07,607.68,mercado,Abreu
+274,47,2024-10-14,236.64,restaurante,Sales de Peixoto
+275,11,2024-11-07,999.58,vestuario,Andrade de Goiás
+276,296,2024-08-28,49.83,eletronico,Sampaio dos Dourados
+277,241,2024-06-05,523.77,farmacia,da Luz
+278,143,2025-03-10,189.67,restaurante,Lima
+279,224,2024-06-22,638.44,farmacia,Ramos
+280,47,2024-07-05,475.31,farmacia,Casa Grande de Minas
+281,171,2024-06-01,327.85,mercado,Vieira
+282,83,2024-09-05,336.51,farmacia,Macedo do Campo
+283,148,2024-11-07,665.96,farmacia,Sampaio das Flores
+284,282,2024-08-22,46.33,mercado,Macedo de Barros
+285,162,2024-12-27,259.87,mercado,Lopes
+286,207,2025-02-18,866.26,mercado,Pereira Paulista
+287,278,2024-05-19,467.36,mercado,da Conceição
+288,97,2025-01-25,523.25,restaurante,Teixeira
+289,256,2025-01-25,629.15,mercado,Oliveira do Norte
+290,105,2025-03-01,274.39,eletronico,Melo
+291,148,2024-11-26,443.73,farmacia,da Mota de Cirino
+292,63,2024-12-22,38.58,restaurante,Porto do Amparo
+293,123,2024-06-13,712.68,vestuario,Ferreira de Jesus
+294,283,2024-09-15,23.54,farmacia,Rios do Campo
+295,48,2025-04-07,232.45,mercado,Farias
+296,237,2024-10-15,947.59,eletronico,da Paz de Ribeiro
+297,256,2024-10-11,933.33,vestuario,Marques
+298,261,2024-06-12,708.36,farmacia,da Cunha Alegre
+299,248,2024-06-23,980.44,eletronico,Moraes do Sul
+300,234,2025-01-19,555.75,farmacia,Jesus de Aragão
+301,98,2024-07-20,922.65,restaurante,Pinto do Amparo
+302,70,2025-01-06,865.39,vestuario,Teixeira de Aragão
+303,213,2024-07-27,346.48,restaurante,Novaes Grande
+304,137,2025-05-04,822.34,vestuario,Macedo do Amparo
+305,153,2024-06-25,839.1,restaurante,Pires
+306,251,2024-12-31,866.61,farmacia,Santos
+307,276,2024-07-09,489.5,vestuario,Novaes do Sul
+308,283,2024-12-09,765.24,farmacia,Borges de Goiás
+309,234,2025-03-31,933.52,eletronico,Martins
+310,123,2024-06-23,576.08,eletronico,Monteiro
+311,211,2025-05-06,53.21,farmacia,Moraes Paulista
+312,196,2024-10-17,392.22,eletronico,Melo de da Cruz
+313,254,2024-11-02,965.18,eletronico,Gomes
+314,258,2024-07-22,965.7,vestuario,Azevedo
+315,52,2024-08-24,875.45,farmacia,Fernandes do Galho
+316,52,2024-08-20,530.69,farmacia,da Paz
+317,8,2025-02-14,725.22,farmacia,Pastor Verde
+318,80,2025-01-20,84.08,vestuario,Cassiano de Machado
+319,174,2024-12-04,627.03,farmacia,Ferreira de Farias
+320,42,2024-12-09,853.25,restaurante,Marques Alegre
+321,195,2025-04-11,954.6,farmacia,Sampaio
+322,278,2024-08-09,45.54,mercado,da Conceição das Pedras
+323,121,2024-05-25,634.85,vestuario,Souza do Amparo
+324,117,2025-02-06,749.3,farmacia,Gomes Grande
+325,51,2024-11-17,762.77,mercado,Cardoso
+326,228,2024-11-20,174.7,vestuario,Brito dos Dourados
+327,15,2024-06-16,55.53,mercado,Albuquerque de Silveira
+328,151,2024-07-03,364.88,farmacia,Rezende Grande
+329,75,2024-06-07,251.76,farmacia,Viana de da Luz
+330,290,2024-09-17,684.98,eletronico,Rezende de Minas
+331,88,2025-04-04,183.32,restaurante,Rocha da Prata
+332,196,2024-10-03,623.51,eletronico,Pires do Amparo
+333,255,2025-04-12,913.7,eletronico,Pinto
+334,119,2024-06-04,466.54,vestuario,Pires
+335,236,2025-01-29,262.77,mercado,da Conceição de Minas
+336,239,2024-10-24,902.2,restaurante,Teixeira
+337,81,2025-01-10,83.12,vestuario,Macedo
+338,154,2024-07-12,642.55,farmacia,Alves do Norte
+339,129,2024-09-11,462.27,vestuario,da Rocha
+340,102,2024-09-25,999.38,farmacia,Lopes Grande
+341,55,2024-08-11,244.83,restaurante,Nunes da Serra
+342,184,2024-07-14,579.06,vestuario,Barros
+343,12,2024-12-31,978.17,farmacia,Pinto de Goiás
+344,141,2024-11-18,18.02,mercado,da Conceição
+345,255,2024-11-04,834.51,vestuario,Marques Paulista
+346,118,2025-01-22,610.99,vestuario,Martins
+347,113,2025-04-23,640.25,restaurante,Rocha da Prata
+348,129,2024-07-09,680.99,eletronico,Macedo
+349,50,2024-09-20,904.37,mercado,Porto das Pedras
+350,159,2025-02-01,790.72,mercado,Marques da Mata
+351,297,2024-07-25,371.21,eletronico,Mendes do Campo
+352,47,2024-08-09,910.53,vestuario,Oliveira da Praia
+353,213,2024-12-18,183.88,eletronico,Sampaio da Mata
+354,277,2024-05-17,877.7,vestuario,da Mota do Sul
+355,272,2024-12-14,506.78,vestuario,Pereira
+356,85,2025-02-22,264.4,farmacia,da Paz de Vasconcelos
+357,152,2025-03-15,749.09,vestuario,Pereira
+358,59,2025-03-16,473.65,mercado,Câmara do Oeste
+359,73,2025-01-05,756.61,eletronico,Rocha Grande
+360,204,2025-01-07,967.6,restaurante,Pires
+361,188,2025-01-15,99.4,farmacia,das Neves
+362,8,2025-03-11,271.81,mercado,Andrade de Pacheco
+363,233,2024-09-27,374.9,vestuario,Borges
+364,300,2025-04-27,387.22,vestuario,Duarte das Pedras
+365,56,2024-07-16,678.09,farmacia,Cardoso
+366,13,2025-03-10,623.35,restaurante,Moura do Galho
+367,168,2025-04-28,916.1,eletronico,Cavalcante Paulista
+368,33,2025-04-28,639.05,farmacia,da Rocha de Souza
+369,155,2025-04-12,652.75,mercado,Camargo dos Dourados
+370,72,2024-06-07,54.89,mercado,Sá
+371,156,2024-08-04,995.97,mercado,Novais da Praia
+372,50,2024-06-13,242.45,restaurante,Albuquerque Paulista
+373,70,2024-12-03,394.76,vestuario,Marques
+374,277,2024-09-29,424.94,eletronico,Pacheco das Flores
+375,213,2025-03-24,658.37,farmacia,Caldeira de Goiás
+376,209,2024-11-08,939.66,vestuario,Pinto
+377,17,2025-04-17,693.38,eletronico,Pimenta de Goiás
+378,228,2025-01-15,450.25,eletronico,Porto
+379,186,2025-03-24,108.36,vestuario,Sampaio de da Rosa
+380,279,2025-01-16,902.68,vestuario,Camargo Grande
+381,32,2024-05-26,404.16,eletronico,da Rosa
+382,63,2024-11-16,949.52,farmacia,Brito
+383,47,2024-08-08,666.14,restaurante,Gomes
+384,11,2024-11-01,60.07,vestuario,Rios da Prata
+385,125,2024-10-18,988.93,restaurante,Leão
+386,106,2025-01-18,77.92,restaurante,Mendonça
+387,107,2025-01-03,590.52,eletronico,da Mota do Norte
+388,169,2025-02-01,776.62,restaurante,Cunha dos Dourados
+389,2,2024-10-28,284.5,eletronico,Fonseca
+390,67,2024-06-16,544.81,eletronico,Nogueira da Praia
+391,57,2024-06-01,664.45,mercado,da Mota do Oeste
+392,68,2024-06-25,24.71,eletronico,Borges de Ribeiro
+393,166,2024-07-30,25.62,vestuario,Aragão
+394,27,2025-03-10,135.49,farmacia,da Cruz Grande
+395,270,2025-03-10,122.51,mercado,Azevedo
+396,244,2025-03-27,453.79,vestuario,Pastor
+397,263,2024-07-31,597.73,farmacia,Farias
+398,258,2025-03-05,229.33,restaurante,Viana
+399,23,2025-04-23,729.97,restaurante,da Mota
+400,155,2025-04-07,463.46,mercado,Cardoso
+401,32,2024-12-04,998.6,farmacia,Cavalcanti do Campo
+402,219,2025-01-20,689.24,farmacia,Cardoso
+403,228,2024-05-14,82.76,mercado,Vieira de Goiás
+404,165,2024-12-23,612.21,mercado,Almeida da Serra
+405,65,2024-08-20,282.27,restaurante,Cardoso
+406,281,2025-02-21,715.03,farmacia,Moura do Campo
+407,272,2025-02-22,301.95,restaurante,Melo
+408,221,2024-10-30,108.19,mercado,Moraes Verde
+409,283,2024-06-20,723.63,eletronico,Montenegro de Câmara
+410,221,2025-01-02,457.04,eletronico,Siqueira
+411,212,2025-03-09,345.54,farmacia,Marques do Sul
+412,205,2024-06-01,421.83,mercado,Guerra de Lima
+413,161,2025-01-30,432.5,vestuario,Mendonça
+414,192,2025-02-09,954.06,farmacia,Barbosa de Barros
+415,35,2024-09-11,100.31,mercado,Azevedo
+416,48,2024-06-27,437.56,vestuario,Pinto Verde
+417,67,2024-12-07,560.81,restaurante,Garcia do Galho
+418,288,2024-08-31,566.07,mercado,Montenegro de Pereira
+419,211,2024-10-23,360.06,farmacia,Vieira
+420,27,2025-02-05,968.71,restaurante,Rezende
+421,160,2025-01-16,358.13,restaurante,Lopes
+422,260,2024-10-31,220.61,farmacia,Jesus
+423,115,2024-09-17,848.8,vestuario,Guerra de Leão
+424,285,2025-02-16,373.89,vestuario,Dias
+425,294,2024-10-21,233.9,farmacia,Rios Paulista
+426,288,2024-10-01,974.8,restaurante,Rodrigues
+427,286,2025-05-02,35.99,vestuario,Azevedo de Borges
+428,15,2025-03-28,188.61,vestuario,Borges
+429,174,2024-10-23,357.51,eletronico,Souza
+430,74,2025-02-19,570.66,farmacia,Cardoso da Prata
+431,36,2024-06-01,150.46,mercado,Rios do Campo
+432,47,2024-10-15,748.65,eletronico,Rios das Pedras
+433,193,2025-04-11,425.63,vestuario,da Paz
+434,81,2024-12-28,376.35,vestuario,Fogaça do Campo
+435,291,2024-12-19,600.26,mercado,Cassiano
+436,80,2025-01-19,165.84,restaurante,Câmara de Caldeira
+437,26,2024-09-21,677.23,vestuario,Camargo Paulista
+438,227,2024-12-17,665.32,farmacia,Lima
+439,227,2025-04-02,420.04,eletronico,Pereira
+440,263,2025-05-04,122.68,farmacia,Alves da Serra
+441,57,2024-08-23,290.41,restaurante,Fernandes da Praia
+442,250,2024-05-11,531.66,vestuario,Casa Grande
+443,24,2024-12-14,228.31,restaurante,Azevedo Grande
+444,29,2025-02-20,17.61,vestuario,Borges
+445,109,2025-02-22,769.68,vestuario,Garcia
+446,149,2024-10-19,334.84,mercado,Fernandes de Castro
+447,255,2024-09-29,749.54,eletronico,Silveira Alegre
+448,67,2025-03-06,386.41,eletronico,Aragão
+449,257,2024-07-08,563.14,vestuario,Sá
+450,37,2025-01-03,403.1,mercado,Rocha
+451,224,2024-06-09,28.55,mercado,Macedo das Pedras
+452,161,2024-11-13,580.0,restaurante,Leão de da Mata
+453,208,2024-07-31,712.4,farmacia,Ferreira
+454,149,2024-10-22,124.02,mercado,da Paz
+455,167,2025-01-27,180.15,restaurante,Moura de Rios
+456,236,2024-09-05,833.71,vestuario,Câmara
+457,46,2024-10-09,442.34,mercado,Abreu
+458,125,2024-07-27,441.32,farmacia,Cunha Grande
+459,269,2025-03-01,87.86,vestuario,da Rocha Alegre
+460,174,2024-06-24,229.36,eletronico,Monteiro
+461,40,2025-02-23,515.38,mercado,Cavalcanti Grande
+462,272,2024-10-03,514.85,vestuario,Montenegro
+463,180,2024-12-11,730.11,eletronico,Barbosa das Flores
+464,121,2025-04-08,111.78,vestuario,Lopes
+465,102,2024-05-16,181.76,eletronico,Barbosa de Dias
+466,39,2024-12-18,185.37,farmacia,Oliveira das Flores
+467,238,2025-02-08,756.9,restaurante,da Rocha do Campo
+468,230,2024-10-13,684.32,restaurante,Duarte
+469,166,2024-07-14,865.6,vestuario,Sales de Fonseca
+470,78,2024-06-12,445.37,farmacia,Caldeira de Goiás
+471,227,2024-10-25,635.07,vestuario,Moura de Minas
+472,29,2024-10-09,358.42,mercado,Souza Alegre
+473,159,2024-08-03,467.13,mercado,Vasconcelos da Serra
+474,30,2024-06-07,375.05,vestuario,Moura
+475,40,2024-11-23,648.22,mercado,Vasconcelos
+476,260,2024-09-21,390.64,restaurante,Siqueira Grande
+477,284,2024-08-08,954.69,mercado,Casa Grande
+478,231,2024-08-16,909.96,restaurante,Cavalcanti
+479,97,2024-12-28,328.31,farmacia,Teixeira
+480,257,2025-02-27,159.35,mercado,Cavalcanti
+481,231,2025-03-05,112.47,vestuario,Martins de Sá
+482,44,2024-12-13,509.5,eletronico,Rodrigues de Nunes
+483,21,2025-01-13,255.27,farmacia,Pires Alegre
+484,225,2024-07-06,528.83,restaurante,Azevedo de Melo
+485,82,2024-10-27,370.26,vestuario,Vieira Paulista
+486,199,2024-12-24,414.68,vestuario,Fogaça
+487,27,2024-11-22,791.33,vestuario,das Neves
+488,34,2024-11-04,336.39,restaurante,Andrade de Araújo
+489,198,2024-09-29,291.31,restaurante,Barbosa de Minas
+490,77,2025-01-02,340.03,restaurante,Martins Verde
+491,73,2024-12-10,917.58,vestuario,Machado
+492,201,2025-04-27,137.66,mercado,Duarte
+493,159,2024-12-29,563.33,vestuario,Montenegro de Cassiano
+494,66,2024-06-02,673.42,restaurante,Caldeira de Fernandes
+495,48,2025-02-10,649.56,farmacia,Montenegro
+496,261,2025-01-14,368.21,vestuario,Aparecida
+497,159,2024-08-13,188.46,eletronico,Macedo de Moura
+498,175,2024-11-28,948.19,farmacia,Fonseca
+499,99,2024-09-30,234.28,eletronico,Gomes das Pedras
+500,80,2025-03-05,86.39,mercado,Rocha do Norte
+501,260,2025-03-11,773.17,restaurante,Azevedo Alegre
+502,20,2024-06-14,665.31,restaurante,da Paz Paulista
+503,68,2025-02-14,601.27,eletronico,Farias
+504,84,2024-06-09,189.04,restaurante,Ferreira
+505,85,2024-09-06,723.97,mercado,Cardoso de Minas
+506,211,2024-09-06,370.66,eletronico,Ramos Alegre
+507,228,2025-03-20,614.49,farmacia,Rios
+508,120,2025-02-05,538.67,vestuario,Ramos
+509,241,2025-01-24,904.93,eletronico,Moraes da Praia
+510,189,2024-05-16,681.52,restaurante,das Neves da Serra
+511,226,2024-07-31,467.06,vestuario,Vargas do Amparo
+512,196,2024-07-22,507.88,farmacia,Carvalho
+513,83,2024-07-08,818.72,restaurante,da Rocha
+514,71,2025-04-01,874.27,mercado,Montenegro
+515,247,2025-03-04,875.38,restaurante,Ribeiro
+516,53,2024-09-16,714.29,restaurante,Peixoto
+517,64,2024-10-02,292.21,eletronico,Castro
+518,140,2024-07-18,454.83,restaurante,Silveira
+519,76,2024-10-25,832.74,mercado,Jesus
+520,114,2024-09-27,818.54,vestuario,Macedo
+521,14,2025-01-01,420.75,farmacia,Sá dos Dourados
+522,258,2024-08-07,380.22,farmacia,das Neves
+523,42,2025-03-19,381.16,mercado,Correia de Freitas
+524,164,2025-01-27,931.52,vestuario,Martins de Vargas
+525,75,2024-08-26,146.22,vestuario,Montenegro do Galho
+526,242,2024-10-18,699.11,eletronico,Costa
+527,241,2025-03-16,454.12,mercado,da Cunha
+528,41,2024-05-29,28.81,eletronico,Freitas de Novaes
+529,77,2025-05-06,553.32,restaurante,Silva
+530,271,2025-04-02,429.02,vestuario,da Paz
+531,122,2024-06-10,308.14,mercado,da Mata
+532,123,2024-10-30,425.63,restaurante,Lopes
+533,235,2024-06-13,72.18,farmacia,Machado
+534,275,2025-04-17,26.27,restaurante,Alves das Pedras
+535,295,2024-05-29,249.52,eletronico,Montenegro da Praia
+536,150,2024-08-08,434.95,restaurante,Barros da Praia
+537,181,2024-08-04,248.16,farmacia,Dias
+538,96,2025-05-05,667.73,mercado,Silva
+539,269,2025-01-16,974.91,mercado,Vieira Grande
+540,270,2024-07-01,548.64,restaurante,da Paz
+541,284,2025-04-30,30.13,farmacia,Sampaio de Carvalho
+542,23,2025-02-27,639.31,vestuario,Machado de Pimenta
+543,130,2024-05-11,749.84,vestuario,Almeida
+544,35,2024-08-16,351.35,mercado,Cassiano
+545,298,2024-12-08,737.84,vestuario,Camargo da Mata
+546,69,2024-08-09,53.89,restaurante,Campos do Norte
+547,174,2024-08-09,815.37,eletronico,Porto dos Dourados
+548,238,2024-06-02,981.01,farmacia,Monteiro
+549,94,2024-12-26,813.38,mercado,Pires
+550,235,2024-11-25,46.61,eletronico,Silva
+551,23,2024-07-03,793.2,mercado,Lima do Sul
+552,162,2025-01-02,934.04,restaurante,da Costa Verde
+553,204,2024-10-17,989.23,restaurante,Rios
+554,243,2025-01-23,260.78,eletronico,Moura
+555,147,2024-09-26,363.4,mercado,Moura
+556,170,2024-12-06,280.48,vestuario,Gomes
+557,224,2025-04-13,890.59,farmacia,Aparecida de Porto
+558,198,2024-10-06,345.65,eletronico,da Cunha do Sul
+559,255,2024-09-24,695.15,vestuario,Ferreira
+560,266,2024-08-10,274.05,mercado,Vargas
+561,218,2024-12-20,88.14,restaurante,Carvalho do Norte
+562,93,2024-09-22,550.02,vestuario,Ramos da Serra
+563,53,2025-03-27,89.27,vestuario,Sampaio de Mendes
+564,157,2025-01-09,451.46,farmacia,Carvalho
+565,86,2024-06-02,692.87,vestuario,Andrade de da Rocha
+566,229,2024-07-26,51.93,vestuario,Vieira
+567,223,2024-07-25,281.81,mercado,Dias
+568,39,2025-05-06,674.47,farmacia,Moraes das Flores
+569,187,2025-03-21,517.96,eletronico,da Cunha de Andrade
+570,16,2025-02-25,151.35,restaurante,da Paz
+571,225,2024-09-24,44.45,mercado,Rezende
+572,121,2024-09-14,780.73,vestuario,Campos da Praia
+573,186,2024-10-25,389.03,restaurante,Souza dos Dourados
+574,17,2025-04-21,609.04,farmacia,Fernandes da Serra
+575,190,2024-11-17,378.29,mercado,Freitas de Moreira
+576,294,2024-08-20,146.32,vestuario,Siqueira
+577,204,2024-10-20,321.24,vestuario,Lopes
+578,128,2024-12-28,960.91,mercado,Nogueira
+579,96,2024-08-31,504.05,farmacia,Caldeira de Minas
+580,288,2024-09-13,126.58,vestuario,das Neves dos Dourados
+581,229,2024-12-29,222.42,restaurante,Cavalcante dos Dourados
+582,147,2024-09-22,697.04,farmacia,Aparecida de Siqueira
+583,103,2025-04-11,131.41,mercado,Pimenta das Pedras
+584,232,2024-08-23,180.93,farmacia,Barbosa
+585,45,2025-01-24,812.41,vestuario,Fonseca do Galho
+586,178,2025-03-16,712.45,restaurante,Alves
+587,278,2024-07-03,297.46,vestuario,Andrade de Cardoso
+588,81,2024-06-04,714.69,eletronico,Vasconcelos
+589,186,2025-01-14,513.67,mercado,Fonseca das Flores
+590,103,2024-12-15,794.15,eletronico,Pereira
+591,253,2024-07-07,36.02,restaurante,Freitas de Freitas
+592,294,2024-10-28,375.22,restaurante,Oliveira
+593,67,2024-07-01,615.83,mercado,Gonçalves Alegre
+594,34,2025-01-16,316.2,farmacia,da Cruz do Campo
+595,270,2024-05-19,416.69,farmacia,Monteiro
+596,295,2024-11-26,83.01,vestuario,Novais do Campo
+597,38,2024-08-18,455.47,restaurante,Santos dos Dourados
+598,177,2024-07-31,137.05,restaurante,Sales do Amparo
+599,94,2024-07-25,770.1,eletronico,Carvalho
+600,222,2025-04-05,507.84,mercado,Machado
+601,64,2024-07-15,522.92,vestuario,Borges de Rodrigues
+602,85,2025-04-02,170.35,eletronico,Rios da Praia
+603,178,2025-02-08,948.01,restaurante,Novaes
+604,146,2024-12-05,847.47,vestuario,da Rosa da Serra
+605,101,2025-02-09,638.71,restaurante,Vieira
+606,141,2024-09-26,133.92,vestuario,Campos
+607,274,2024-07-26,102.49,eletronico,da Costa
+608,298,2025-03-11,162.65,restaurante,Alves de Fonseca
+609,173,2024-12-10,844.1,restaurante,Martins da Prata
+610,22,2024-06-28,826.98,mercado,Azevedo
+611,42,2024-09-06,55.01,restaurante,Silva do Amparo
+612,136,2024-11-29,654.62,restaurante,Vargas das Pedras
+613,214,2025-03-24,621.93,mercado,Cardoso
+614,255,2024-09-09,890.11,restaurante,Machado
+615,149,2024-11-05,645.49,vestuario,Cardoso da Prata
+616,248,2025-01-12,252.43,farmacia,Vargas
+617,153,2024-06-28,459.01,mercado,Montenegro do Norte
+618,81,2025-03-27,445.21,farmacia,Moreira
+619,238,2024-07-07,211.98,restaurante,Cavalcante da Serra
+620,74,2024-09-11,319.46,vestuario,Ferreira
+621,177,2025-05-09,975.62,eletronico,Barros Paulista
+622,190,2024-07-24,519.83,mercado,Cardoso da Mata
+623,164,2025-01-02,249.32,mercado,Montenegro
+624,137,2025-01-12,455.1,eletronico,Pastor
+625,50,2025-05-09,60.1,farmacia,Cavalcante
+626,215,2025-01-19,255.79,eletronico,Nunes do Norte
+627,168,2025-03-25,934.41,vestuario,Barros
+628,98,2024-05-26,765.49,farmacia,Rezende do Oeste
+629,264,2025-03-02,472.15,vestuario,Pinto do Sul
+630,255,2024-11-18,32.94,farmacia,Ramos da Mata
+631,259,2024-11-12,462.66,eletronico,Rodrigues
+632,111,2024-10-13,587.51,mercado,Marques de Minas
+633,26,2025-01-31,288.54,restaurante,Castro
+634,241,2024-10-26,292.89,mercado,Mendes dos Dourados
+635,56,2024-07-27,436.62,vestuario,Pereira Grande
+636,188,2024-09-07,766.22,vestuario,Siqueira da Praia
+637,24,2024-10-10,406.58,restaurante,Teixeira
+638,288,2024-09-29,202.71,restaurante,Dias
+639,148,2024-08-10,82.8,restaurante,Campos de da Mata
+640,231,2024-10-30,766.76,vestuario,Casa Grande
+641,61,2024-06-15,137.38,mercado,da Rocha
+642,202,2024-10-05,379.47,vestuario,da Cruz da Serra
+643,286,2025-03-20,939.56,eletronico,Oliveira Alegre
+644,102,2024-07-21,606.44,farmacia,Monteiro
+645,257,2024-11-24,49.85,mercado,Monteiro de das Neves
+646,71,2024-11-18,716.46,farmacia,Borges
+647,266,2024-10-08,462.42,restaurante,da Costa de Cunha
+648,264,2024-12-21,148.38,restaurante,Aragão do Norte
+649,164,2024-08-26,170.88,restaurante,Peixoto de Rezende
+650,154,2025-01-25,597.79,restaurante,da Paz de Nascimento
+651,261,2024-05-12,537.02,restaurante,Lopes
+652,154,2024-06-30,480.14,mercado,Siqueira da Praia
+653,189,2025-03-01,337.93,mercado,Fonseca do Norte
+654,214,2024-10-11,587.87,mercado,Nunes
+655,243,2024-12-13,272.88,restaurante,Fonseca
+656,296,2024-12-09,235.27,mercado,Barbosa das Flores
+657,299,2024-11-20,485.64,restaurante,Teixeira de Novaes
+658,195,2024-08-25,156.3,eletronico,Cardoso
+659,17,2024-06-15,576.84,mercado,Freitas Alegre
+660,98,2024-12-11,28.75,vestuario,Sá Grande
+661,215,2024-07-25,159.92,eletronico,Montenegro do Norte
+662,211,2024-05-26,506.8,restaurante,Carvalho
+663,242,2025-02-10,874.09,mercado,Melo do Galho
+664,71,2024-11-02,523.5,restaurante,Pereira
+665,167,2025-04-20,998.14,farmacia,Duarte
+666,270,2025-05-05,383.06,eletronico,Castro das Flores
+667,236,2025-01-03,913.0,vestuario,Pastor Alegre
+668,280,2024-11-22,360.74,vestuario,Santos de Nunes
+669,248,2024-09-02,200.34,eletronico,Almeida de Freitas
+670,143,2024-09-14,562.51,eletronico,Leão
+671,153,2024-12-21,773.46,eletronico,Vieira do Sul
+672,251,2024-12-26,323.87,vestuario,da Luz de Rezende
+673,287,2025-03-09,934.36,vestuario,Silveira
+674,148,2024-05-28,130.66,restaurante,Cavalcante de Moura
+675,195,2025-01-08,896.8,farmacia,Casa Grande de Goiás
+676,177,2024-05-21,955.06,eletronico,Correia
+677,149,2024-05-16,51.65,mercado,Dias de Leão
+678,178,2024-07-06,924.77,vestuario,Sales do Oeste
+679,246,2024-10-15,221.85,restaurante,Sousa de Siqueira
+680,139,2024-06-02,933.69,vestuario,Moreira
+681,71,2024-07-28,118.13,restaurante,Ribeiro do Amparo
+682,123,2024-11-29,250.03,restaurante,Dias da Serra
+683,116,2024-11-03,641.57,mercado,Nogueira da Praia
+684,52,2025-01-26,419.17,farmacia,Pimenta do Amparo
+685,52,2024-07-22,684.38,eletronico,da Mota
+686,3,2024-12-11,964.87,eletronico,Câmara da Mata
+687,209,2025-03-04,656.36,farmacia,Santos do Oeste
+688,245,2025-02-01,654.03,vestuario,Dias de Mendes
+689,165,2024-09-21,292.56,mercado,da Paz do Campo
+690,46,2024-12-17,655.78,eletronico,Gonçalves da Praia
+691,274,2025-03-05,741.3,mercado,da Rocha
+692,90,2024-05-25,423.71,eletronico,Silva de Minas
+693,19,2024-09-20,997.2,farmacia,Rezende de da Cunha
+694,254,2025-02-23,194.45,vestuario,Cunha de Costa
+695,20,2025-03-26,19.17,restaurante,Novais Paulista
+696,55,2024-07-01,929.17,vestuario,Pimenta
+697,146,2025-02-20,459.81,restaurante,da Cruz
+698,269,2024-05-28,498.97,eletronico,Porto
+699,259,2024-08-07,473.34,eletronico,Brito
+700,58,2024-10-16,337.38,farmacia,Silva do Amparo
+701,132,2024-06-17,721.41,mercado,Abreu
+702,173,2024-12-08,792.86,restaurante,Jesus
+703,99,2025-01-17,183.74,farmacia,Mendes de Rezende
+704,219,2024-07-25,520.13,mercado,Duarte da Mata
+705,206,2025-01-14,672.56,eletronico,Vargas
+706,72,2024-06-12,482.68,eletronico,Nascimento
+707,4,2025-02-19,268.18,eletronico,Cavalcanti
+708,229,2024-10-18,756.22,vestuario,Andrade
+709,155,2025-03-29,586.64,restaurante,Viana do Amparo
+710,6,2024-07-20,268.94,vestuario,Andrade do Sul
+711,121,2024-09-01,71.5,mercado,Farias
+712,239,2024-08-27,313.74,farmacia,Ramos de Nogueira
+713,258,2024-11-28,923.87,vestuario,Carvalho de Montenegro
+714,61,2024-11-06,642.32,vestuario,Correia do Campo
+715,189,2024-09-14,618.48,eletronico,Siqueira
+716,69,2024-11-03,483.4,farmacia,Silva da Serra
+717,192,2024-05-14,421.69,restaurante,Vieira da Mata
+718,242,2024-12-15,759.78,eletronico,Cavalcanti
+719,127,2025-01-01,683.54,restaurante,Lima do Galho
+720,42,2024-09-13,530.25,restaurante,Guerra
+721,186,2025-01-23,87.32,restaurante,Cirino
+722,58,2024-07-02,71.14,restaurante,Duarte de da Cruz
+723,259,2024-05-11,210.14,restaurante,Gomes de Goiás
+724,77,2024-10-29,172.89,restaurante,Farias da Mata
+725,227,2024-12-21,125.08,eletronico,da Luz
+726,299,2025-01-17,493.94,restaurante,Sales de Goiás
+727,229,2024-06-02,810.61,farmacia,Martins
+728,68,2024-09-05,518.12,farmacia,Guerra
+729,289,2025-01-30,67.16,farmacia,Sales do Campo
+730,158,2025-01-12,726.05,farmacia,Freitas de Goiás
+731,131,2024-08-02,818.29,eletronico,Mendes
+732,297,2024-07-07,82.3,farmacia,Souza de Pereira
+733,177,2024-10-01,703.38,restaurante,Sampaio da Prata
+734,31,2025-04-28,935.24,mercado,Sá de Nascimento
+735,242,2025-03-16,41.42,farmacia,Teixeira
+736,93,2024-08-13,771.28,farmacia,Moura
+737,192,2024-10-29,992.93,farmacia,Barbosa Verde
+738,230,2024-06-21,870.92,farmacia,Novaes
+739,193,2025-04-24,89.45,restaurante,Oliveira
+740,69,2024-12-03,657.0,vestuario,Cavalcante
+741,61,2024-09-13,186.69,restaurante,Camargo de Rodrigues
+742,202,2024-07-27,533.55,eletronico,Borges de Moraes
+743,2,2024-10-29,758.62,vestuario,Marques
+744,238,2024-06-29,676.76,restaurante,Marques Verde
+745,218,2024-05-31,536.61,eletronico,Rocha de das Neves
+746,127,2025-02-13,466.02,eletronico,Gonçalves
+747,142,2024-08-15,196.6,mercado,Souza
+748,17,2024-08-01,811.38,farmacia,Aparecida
+749,9,2024-10-20,248.26,mercado,Sampaio de Minas
+750,52,2024-12-05,598.0,farmacia,Azevedo
+751,25,2025-05-06,252.29,mercado,Andrade de da Paz
+752,206,2024-10-14,444.57,restaurante,Vargas
+753,112,2024-06-30,756.84,mercado,Freitas das Flores
+754,72,2024-10-30,508.86,vestuario,Garcia de Minas
+755,120,2025-01-29,817.63,restaurante,Rezende
+756,164,2025-04-08,581.7,vestuario,Campos da Serra
+757,122,2024-12-03,308.75,eletronico,Moura Grande
+758,267,2025-02-15,228.83,vestuario,Abreu
+759,141,2025-02-26,70.35,restaurante,da Rosa
+760,90,2024-11-04,629.73,farmacia,Nascimento das Flores
+761,285,2025-03-24,500.66,vestuario,da Cruz
+762,196,2024-11-03,787.95,vestuario,Cassiano Paulista
+763,214,2024-07-21,414.18,vestuario,Andrade
+764,193,2025-03-19,192.04,restaurante,Pimenta do Sul
+765,243,2024-08-10,248.56,eletronico,Azevedo
+766,154,2024-06-17,858.97,eletronico,Machado
+767,238,2024-12-27,915.59,restaurante,da Cruz
+768,212,2025-02-20,968.11,restaurante,Guerra
+769,272,2024-10-26,142.75,eletronico,Nogueira
+770,131,2024-08-01,211.3,mercado,Carvalho
+771,231,2024-11-20,848.66,mercado,da Conceição Verde
+772,275,2024-09-09,727.34,eletronico,da Costa da Mata
+773,27,2025-04-14,275.78,restaurante,Ribeiro
+774,21,2024-11-27,874.88,eletronico,Jesus
+775,287,2024-09-02,224.85,eletronico,Araújo da Prata
+776,171,2024-12-24,310.16,mercado,Pires
+777,109,2025-01-27,937.79,mercado,Novais do Amparo
+778,246,2024-05-27,915.3,restaurante,Ramos das Flores
+779,105,2025-03-10,402.67,eletronico,Sampaio das Pedras
+780,283,2024-10-14,328.4,vestuario,da Rosa
+781,195,2024-10-02,471.59,vestuario,Sá
+782,158,2024-12-03,268.95,restaurante,da Costa de Câmara
+783,255,2024-09-02,471.34,farmacia,Martins
+784,164,2025-04-29,915.19,vestuario,Novais
+785,161,2024-10-16,419.79,restaurante,Novais do Galho
+786,114,2024-06-30,743.84,mercado,da Cruz Paulista
+787,134,2024-07-26,557.78,restaurante,Ramos de Minas
+788,297,2025-05-02,722.81,vestuario,Freitas de Borges
+789,79,2024-12-03,204.23,eletronico,Aragão
+790,195,2024-08-21,574.09,eletronico,Rocha do Norte
+791,256,2025-04-13,555.14,vestuario,Correia
+792,132,2025-03-17,765.73,farmacia,Mendes
+793,252,2024-07-29,466.22,vestuario,da Rosa do Sul
+794,87,2024-07-30,148.56,restaurante,Sousa
+795,251,2024-06-23,192.21,restaurante,da Cruz de Sampaio
+796,31,2024-12-29,528.7,mercado,Gonçalves
+797,25,2025-04-29,766.7,farmacia,Novaes
+798,71,2024-09-10,844.12,eletronico,Garcia dos Dourados
+799,35,2024-12-02,710.1,mercado,das Neves Paulista
+800,112,2024-09-25,510.68,vestuario,Martins de Brito
+801,31,2025-03-16,621.66,restaurante,Teixeira de Dias
+802,248,2025-04-29,662.69,mercado,Freitas
+803,4,2024-09-07,536.89,farmacia,Aparecida Verde
+804,7,2025-04-09,26.56,vestuario,Sousa
+805,275,2024-07-04,977.7,mercado,da Luz
+806,258,2024-12-09,815.03,farmacia,da Rocha Grande
+807,92,2024-07-24,115.95,mercado,da Conceição das Flores
+808,269,2024-12-16,157.41,eletronico,Monteiro
+809,270,2024-12-08,259.89,vestuario,da Cunha do Amparo
+810,137,2025-02-14,796.99,mercado,Marques de Cavalcante
+811,192,2025-02-17,959.7,farmacia,Cavalcante Grande
+812,290,2025-02-12,250.78,eletronico,Cirino de Nogueira
+813,154,2025-01-13,687.2,mercado,Moura
+814,17,2024-05-22,102.57,farmacia,Rios
+815,194,2024-05-27,557.17,mercado,Jesus
+816,5,2024-07-01,705.82,mercado,Azevedo
+817,256,2025-02-07,846.88,vestuario,Albuquerque
+818,290,2024-08-01,977.56,mercado,Freitas de Araújo
+819,271,2025-01-03,919.96,eletronico,Ribeiro de Mendonça
+820,109,2024-05-15,902.26,restaurante,Nascimento
+821,244,2024-12-09,278.38,mercado,Albuquerque do Sul
+822,144,2024-11-30,900.32,restaurante,Nascimento da Mata
+823,17,2024-05-15,187.56,vestuario,Cavalcanti do Campo
+824,9,2025-04-30,961.85,restaurante,Moura
+825,74,2024-07-05,754.73,farmacia,Correia
+826,40,2025-01-04,306.28,restaurante,Fogaça Paulista
+827,124,2025-03-13,571.03,farmacia,Barros da Praia
+828,277,2024-10-13,338.41,eletronico,Nunes de da Cruz
+829,41,2025-02-03,505.78,vestuario,da Rosa
+830,28,2025-01-29,106.71,eletronico,Rezende
+831,39,2025-04-07,347.19,restaurante,Borges
+832,204,2024-10-13,969.23,vestuario,Garcia da Prata
+833,16,2024-11-09,637.78,farmacia,Porto
+834,252,2024-05-12,235.86,restaurante,Barros
+835,193,2024-11-19,437.53,restaurante,Ramos Alegre
+836,195,2024-12-14,94.84,restaurante,Moura
+837,152,2025-04-30,800.07,mercado,da Conceição
+838,43,2024-07-30,275.29,farmacia,da Mata de Aparecida
+839,79,2025-05-02,742.26,vestuario,Rodrigues
+840,185,2025-05-03,115.49,mercado,Nogueira Verde
+841,158,2025-01-19,450.29,vestuario,Cavalcanti
+842,53,2025-05-04,141.18,eletronico,Almeida do Oeste
+843,221,2024-12-22,454.36,restaurante,Sá
+844,263,2025-03-23,413.96,mercado,Barbosa da Mata
+845,46,2024-07-11,360.38,mercado,Nunes
+846,167,2025-03-29,865.08,mercado,Rocha da Prata
+847,150,2024-09-14,419.67,mercado,Sá Grande
+848,287,2025-03-11,906.16,eletronico,Montenegro
+849,293,2025-02-22,525.89,farmacia,Aragão do Campo
+850,87,2024-10-25,147.45,vestuario,Barbosa
+851,138,2024-09-18,498.19,mercado,Vasconcelos Alegre
+852,86,2024-05-20,440.33,farmacia,Viana dos Dourados
+853,154,2024-11-15,489.39,mercado,Fogaça
+854,185,2024-12-09,259.18,eletronico,Lopes da Serra
+855,254,2025-01-27,597.87,eletronico,Barros da Mata
+856,235,2025-03-14,115.9,vestuario,Silva
+857,4,2024-06-06,949.34,vestuario,da Mata
+858,195,2024-07-07,806.04,vestuario,Silva Grande
+859,226,2025-02-20,341.39,restaurante,Dias da Praia
+860,70,2024-06-19,307.43,restaurante,Abreu
+861,103,2024-09-05,484.22,eletronico,Fonseca de Teixeira
+862,204,2024-08-21,969.04,vestuario,Cardoso
+863,252,2024-06-11,968.09,eletronico,Lopes
+864,167,2024-10-30,382.29,farmacia,Caldeira do Sul
+865,187,2024-06-12,122.75,restaurante,Novaes de Minas
+866,103,2024-12-26,596.3,restaurante,Gomes do Sul
+867,93,2024-08-30,684.9,restaurante,Gomes de Minas
+868,14,2025-02-14,953.47,farmacia,Oliveira
+869,108,2024-11-27,444.07,vestuario,Rodrigues
+870,36,2024-10-03,820.78,farmacia,Carvalho
+871,256,2024-08-21,147.79,vestuario,da Mata do Amparo
+872,124,2024-07-04,260.15,eletronico,Cavalcante
+873,217,2024-10-24,791.19,mercado,Leão da Mata
+874,230,2024-11-13,990.79,farmacia,Fonseca
+875,299,2024-08-14,406.8,restaurante,Silveira
+876,215,2025-01-06,548.21,vestuario,Peixoto de Pimenta
+877,275,2024-07-23,597.88,mercado,Caldeira de Carvalho
+878,56,2024-09-04,771.26,vestuario,Gonçalves
+879,86,2024-09-15,650.53,mercado,Farias dos Dourados
+880,289,2024-09-15,983.77,farmacia,Rezende Grande
+881,170,2024-09-02,966.06,farmacia,Pereira do Oeste
+882,55,2024-11-11,20.44,vestuario,Cavalcanti das Flores
+883,114,2024-09-09,515.57,restaurante,Sousa do Amparo
+884,286,2024-12-18,584.71,restaurante,Duarte
+885,114,2024-10-02,451.32,farmacia,Viana das Flores
+886,238,2024-09-27,774.62,restaurante,Nunes
+887,257,2024-07-25,159.24,mercado,Rodrigues
+888,248,2025-03-03,113.5,farmacia,Siqueira
+889,44,2024-11-04,124.91,eletronico,Macedo
+890,179,2025-03-14,318.77,farmacia,Sales de Minas
+891,106,2025-03-23,525.9,vestuario,Rocha do Amparo
+892,244,2024-07-02,106.65,farmacia,da Costa Paulista
+893,164,2025-01-19,76.5,mercado,Silva
+894,59,2024-10-20,32.36,vestuario,Barbosa dos Dourados
+895,56,2024-12-27,680.37,eletronico,Pacheco de Guerra
+896,125,2024-12-02,520.83,restaurante,Nogueira do Norte
+897,82,2025-03-12,337.68,farmacia,Sampaio da Prata
+898,237,2024-12-25,239.54,farmacia,Caldeira
+899,95,2025-03-03,194.52,farmacia,Ribeiro
+900,203,2025-01-22,38.9,restaurante,Cavalcante do Norte
+901,102,2024-12-13,455.08,farmacia,Sá Alegre
+902,200,2025-03-14,14.41,eletronico,Caldeira do Sul
+903,106,2024-06-16,285.56,mercado,Câmara do Galho
+904,296,2025-02-23,110.73,restaurante,Machado
+905,96,2024-10-01,372.14,eletronico,Martins Verde
+906,235,2025-02-01,122.82,farmacia,Ferreira
+907,271,2024-05-18,966.26,vestuario,Caldeira de da Rocha
+908,199,2024-10-17,615.2,restaurante,Camargo
+909,59,2025-03-27,354.45,farmacia,Ferreira
+910,89,2024-09-07,815.6,vestuario,Marques do Oeste
+911,44,2024-11-27,675.39,vestuario,Ferreira de Melo
+912,61,2024-06-15,246.19,mercado,Silveira de Sampaio
+913,94,2024-10-31,379.57,eletronico,Azevedo da Mata
+914,262,2024-05-26,394.58,restaurante,Almeida
+915,71,2025-04-03,579.06,farmacia,Ramos do Campo
+916,96,2025-01-26,491.8,restaurante,Sousa
+917,89,2024-08-11,559.36,farmacia,Novaes
+918,148,2024-07-10,148.89,vestuario,Novais das Pedras
+919,231,2024-11-04,623.22,vestuario,Guerra
+920,5,2025-01-08,489.76,eletronico,Cirino
+921,197,2025-01-12,964.19,restaurante,Gonçalves do Sul
+922,254,2025-02-19,415.04,farmacia,Machado
+923,213,2024-12-24,713.04,farmacia,Gomes do Sul
+924,251,2025-02-06,175.58,restaurante,Costela
+925,16,2024-08-25,797.92,eletronico,Oliveira
+926,150,2024-06-17,42.37,eletronico,Fonseca
+927,276,2024-09-12,295.78,farmacia,Marques
+928,290,2024-06-22,745.09,farmacia,Rios do Amparo
+929,282,2024-11-29,515.7,restaurante,Peixoto das Flores
+930,59,2025-01-01,275.21,restaurante,Pastor do Campo
+931,188,2024-09-21,546.62,mercado,Marques da Serra
+932,226,2025-03-21,550.89,farmacia,Pimenta Verde
+933,53,2024-06-10,738.63,eletronico,Dias
+934,153,2024-06-23,876.06,mercado,das Neves
+935,231,2024-06-23,270.19,mercado,Freitas
+936,225,2025-02-02,866.64,mercado,Moraes
+937,122,2024-10-06,217.78,restaurante,Peixoto Grande
+938,180,2024-12-18,862.44,restaurante,Lima da Serra
+939,220,2024-11-14,174.32,eletronico,Novais
+940,106,2024-07-12,815.39,mercado,da Paz de Carvalho
+941,292,2024-07-20,357.31,vestuario,Machado do Norte
+942,276,2025-04-10,176.69,vestuario,Albuquerque do Amparo
+943,149,2024-07-01,577.01,restaurante,Gomes
+944,49,2024-12-13,144.23,farmacia,Jesus de Rodrigues
+945,31,2024-11-15,992.56,eletronico,Santos dos Dourados
+946,68,2024-11-14,257.18,vestuario,Barros
+947,127,2024-12-14,763.86,farmacia,Vieira
+948,251,2025-02-28,150.75,vestuario,da Rocha
+949,213,2024-05-21,381.42,mercado,Câmara da Prata
+950,48,2024-08-29,408.82,vestuario,Vasconcelos
+951,189,2024-11-02,460.15,farmacia,Novaes de Moraes
+952,168,2024-06-21,586.14,mercado,da Mata
+953,235,2025-03-06,638.49,vestuario,Nogueira do Norte
+954,33,2025-02-28,797.72,farmacia,Nogueira de Cunha
+955,112,2024-10-21,968.45,eletronico,Sousa
+956,254,2025-03-27,275.85,vestuario,da Rosa
+957,173,2025-04-13,551.84,eletronico,Machado
+958,290,2024-08-19,853.9,vestuario,Borges dos Dourados
+959,25,2025-04-10,55.48,farmacia,Vasconcelos
+960,9,2025-03-20,132.99,eletronico,Costela
+961,226,2025-03-19,461.95,farmacia,Santos das Pedras
+962,104,2024-07-12,995.74,eletronico,Viana
+963,155,2024-07-28,167.39,vestuario,Araújo
+964,48,2024-12-16,658.04,vestuario,Nascimento Paulista
+965,43,2024-12-26,378.13,eletronico,Duarte
+966,27,2025-02-06,402.38,vestuario,da Rocha Verde
+967,120,2024-08-20,434.94,mercado,Carvalho
+968,49,2025-02-24,11.08,farmacia,Araújo Paulista
+969,40,2025-04-10,141.37,eletronico,Sampaio
+970,266,2025-04-10,683.18,mercado,da Cruz
+971,5,2024-07-04,698.64,mercado,da Cruz das Flores
+972,217,2024-11-15,697.09,farmacia,Oliveira
+973,37,2025-01-09,236.66,mercado,Pires das Pedras
+974,53,2024-10-01,112.17,vestuario,Barbosa de Porto
+975,154,2025-03-13,145.76,eletronico,Guerra
+976,74,2024-11-25,77.73,restaurante,Sales da Praia
+977,5,2024-11-01,614.22,eletronico,Duarte de Pacheco
+978,226,2024-05-09,357.68,eletronico,Siqueira
+979,78,2024-11-03,920.7,restaurante,Azevedo da Prata
+980,227,2024-10-10,861.36,mercado,Lima
+981,52,2025-03-25,148.61,mercado,Monteiro
+982,197,2024-08-21,358.02,farmacia,da Paz Alegre
+983,162,2024-12-07,793.17,eletronico,Nunes
+984,142,2025-04-05,648.17,eletronico,Viana de Fernandes
+985,284,2025-04-21,604.99,restaurante,Aparecida
+986,146,2024-06-16,781.18,mercado,Almeida de Campos
+987,155,2025-05-04,213.39,restaurante,Macedo
+988,261,2024-11-02,196.76,farmacia,Lima
+989,152,2024-07-26,649.71,eletronico,Rezende
+990,254,2024-09-03,392.03,eletronico,da Mota
+991,256,2024-06-14,641.7,mercado,da Cunha de Minas
+992,271,2024-09-30,889.84,mercado,Aragão
+993,185,2024-10-09,934.59,eletronico,Silveira de Goiás
+994,199,2024-10-22,862.21,restaurante,Santos
+995,216,2024-06-14,371.76,eletronico,Cunha
+996,242,2024-11-10,954.91,mercado,Cardoso
+997,9,2024-12-25,591.49,mercado,Moreira
+998,135,2025-01-28,223.59,mercado,Albuquerque de Albuquerque
+999,204,2025-02-03,511.54,restaurante,Campos das Pedras
+1000,213,2025-02-02,429.34,farmacia,Mendes
