@@ -1,48 +1,59 @@
-# Nome da imagem
+# Nome fixo da imagem e do container
 IMAGE_NAME=pyspark-custom
+CONTAINER_NAME=pyspark-container
 
-# Caminho interno padrão da imagem jupyter/pyspark-notebook
+# Caminhos
 CONTAINER_WORKDIR=/home/jovyan/work
+HOST_WORKDIR=$(shell cd)
 
-# Caminho absoluto seguro do host (resolvido em tempo de execução)
-HOST_WORKDIR=$(shell cd && pwd)
-
-# Comando para build da imagem
+# Build da imagem
 build:
 	docker build -t $(IMAGE_NAME) .
 
-# Inicia o container com montagem de volume correta
+# Inicia o container com nome fixo
 start:
-	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME)
+	docker run -it \
+		--name $(CONTAINER_NAME) \
+		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
+		-w $(CONTAINER_WORKDIR) \
+		-p 8888:8888 \
+		$(IMAGE_NAME)
 
-# Acessa o bash dentro do container
+# Bash dentro do container (ou novo efêmero se não existir)
 login:
-	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME) bash
+	docker exec -it $(CONTAINER_NAME) bash || \
+	docker run -it --name $(CONTAINER_NAME) \
+		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
+		-w $(CONTAINER_WORKDIR) \
+		-p 8888:8888 \
+		$(IMAGE_NAME) bash
 
-# Parar (inútil em containers interativos efêmeros)
+# Parar e remover container
 stop:
-	@echo "Use Ctrl+C para parar o container."
+	docker stop $(CONTAINER_NAME) || exit 0
+	docker rm $(CONTAINER_NAME) || exit 0
 
-# Reiniciar
+# Reinicia container
 restart:
 	make stop
 	make start
 
-# Logs não aplicáveis
+# Logs do container
 watch-logs:
-	@echo "Logs indisponíveis com container efêmero."
+	docker logs -f $(CONTAINER_NAME)
 
-# Checagem de código
+# Lint
 lint:
 	isort . --check-only
 	flake8 .
 
-# Correções automáticas
+# Fix lint
 lint-fix:
 	isort .
 	black .
 	flake8 .
 
+# Execução local
 extract:
 	python src/extract/extract_clientes.py
 	python src/extract/extract_transacoes.py
@@ -52,6 +63,7 @@ transform:
 
 run: extract transform
 
+# Verifica __init__.py
 check-init:
 	@echo Verificando __init__.py nos pacotes...
 	@if not exist src\__init__.py (echo ❌ src\__init__.py faltando! & exit /b 1)
