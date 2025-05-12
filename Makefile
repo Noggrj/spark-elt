@@ -1,36 +1,48 @@
-# Nome da imagem
+# Nome fixo da imagem e do container
 IMAGE_NAME=pyspark-custom
+CONTAINER_NAME=pyspark-container
 
 # Caminho interno padrão da imagem jupyter/pyspark-notebook
 CONTAINER_WORKDIR=/home/jovyan/work
 
-# Caminho absoluto seguro do host (resolvido em tempo de execução)
-HOST_WORKDIR=$(shell cd && pwd)
+# Caminho absoluto do host (ajustado em tempo real)
+HOST_WORKDIR=$(shell pwd)
 
-# Comando para build da imagem
+# Build da imagem
 build:
 	docker build -t $(IMAGE_NAME) .
 
-# Inicia o container com montagem de volume correta
+# Inicia o container com nome fixo e volume montado
 start:
-	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME)
+	docker run -it \
+		--name $(CONTAINER_NAME) \
+		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
+		-w $(CONTAINER_WORKDIR) \
+		-p 8888:8888 \
+		$(IMAGE_NAME)
 
-# Acessa o bash dentro do container
+# Acessa o bash no container existente (ou em novo efêmero se não existir)
 login:
-	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME) bash
+	docker exec -it $(CONTAINER_NAME) bash || \
+	docker run -it --name $(CONTAINER_NAME) \
+		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
+		-w $(CONTAINER_WORKDIR) \
+		-p 8888:8888 \
+		$(IMAGE_NAME) bash
 
-# Parar (inútil em containers interativos efêmeros)
+# Para e remove o container pelo nome fixo
 stop:
-	@echo "Use Ctrl+C para parar o container."
+	docker stop $(CONTAINER_NAME) || true
+	docker rm $(CONTAINER_NAME) || true
 
-# Reiniciar
+# Reiniciar container
 restart:
 	make stop
 	make start
 
-# Logs não aplicáveis
+# Logs do container nomeado
 watch-logs:
-	@echo "Logs indisponíveis com container efêmero."
+	docker logs -f $(CONTAINER_NAME)
 
 # Checagem de código
 lint:
@@ -43,6 +55,7 @@ lint-fix:
 	black .
 	flake8 .
 
+# Execução local sem Docker
 extract:
 	python src/extract/extract_clientes.py
 	python src/extract/extract_transacoes.py
@@ -52,6 +65,7 @@ transform:
 
 run: extract transform
 
+# Verificação dos __init__.py
 check-init:
 	@echo Verificando __init__.py nos pacotes...
 	@if not exist src\__init__.py (echo ❌ src\__init__.py faltando! & exit /b 1)
