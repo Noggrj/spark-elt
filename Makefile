@@ -5,35 +5,24 @@ CONTAINER_NAME=pyspark-container
 # Caminho interno padrão da imagem jupyter/pyspark-notebook
 CONTAINER_WORKDIR=/home/jovyan/work
 
-# Caminho absoluto do host (ajustado em tempo real)
-HOST_WORKDIR=$(shell pwd)
+# Caminho absoluto do host (ajustado para Windows)
+HOST_WORKDIR=$(CURDIR)
 
 # Build da imagem
 build:
 	docker build -t $(IMAGE_NAME) .
 
-# Inicia o container com nome fixo e volume montado
+# Inicia os containers com docker-compose
 start:
-	docker run -it \
-		--name $(CONTAINER_NAME) \
-		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
-		-w $(CONTAINER_WORKDIR) \
-		-p 8888:8888 \
-		$(IMAGE_NAME)
+	docker-compose up -d
+
+# Para e remove os containers com docker-compose
+stop:
+	docker-compose down
 
 # Acessa o bash no container existente (ou em novo efêmero se não existir)
 login:
-	docker exec -it $(CONTAINER_NAME) bash || \
-	docker run -it --name $(CONTAINER_NAME) \
-		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
-		-w $(CONTAINER_WORKDIR) \
-		-p 8888:8888 \
-		$(IMAGE_NAME) bash
-
-# Para e remove o container pelo nome fixo
-stop:
-	docker stop $(CONTAINER_NAME) || true
-	docker rm $(CONTAINER_NAME) || true
+	docker exec -it $(CONTAINER_NAME) bash || docker run -it --name $(CONTAINER_NAME) -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -w $(CONTAINER_WORKDIR) -p 8888:8888 $(IMAGE_NAME) bash
 
 # Reiniciar container
 restart:
@@ -42,7 +31,7 @@ restart:
 
 # Logs do container nomeado
 watch-logs:
-	docker logs -f $(CONTAINER_NAME)
+	docker-compose logs -f
 
 # Checagem de código
 lint:
@@ -72,3 +61,13 @@ check-init:
 	@if not exist src\extract\__init__.py (echo ❌ src\extract\__init__.py faltando! & exit /b 1)
 	@if not exist src\transform\__init__.py (echo ❌ src\transform\__init__.py faltando! & exit /b 1)
 	@echo ✅ Todos os __init__.py estão presentes!
+
+# Comandos Kafka
+kafka-produce:
+	python kafka_pipeline.py --mode produce
+
+kafka-consume:
+	python kafka_pipeline.py --mode consume
+
+kafka-pipeline:
+	python kafka_pipeline.py --mode both
