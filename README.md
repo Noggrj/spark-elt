@@ -154,8 +154,6 @@ make kafka-webservice-docker
 
 ## 🧑‍💻 Autor
 
-Desenvolvido por Matheus Nogueira
-
 ---
 
 ## 📜 Licença
