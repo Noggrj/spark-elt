@@ -132,9 +132,6 @@ docker run -it pyspark-custom pip freeze > requirements.txt
 
 ## 🧑‍💻 Autor
 
-Desenvolvido por [Seu Nome]  
-📧 seu.email@exemplo.com
-
 ---
 
 ## 📜 Licença
