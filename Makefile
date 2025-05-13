@@ -6,41 +6,33 @@ CONTAINER_NAME=pyspark-container
 CONTAINER_WORKDIR=/home/jovyan/work
 HOST_WORKDIR=$(shell cd)
 
-# Build da imagem
+# Caminho absoluto seguro do host (resolvido em tempo de execução)
+HOST_WORKDIR=$(shell cd && pwd)
+
+# Comando para build da imagem
 build:
 	docker build -t $(IMAGE_NAME) .
 
-# Inicia o container com nome fixo
+# Inicia o container com montagem de volume correta
 start:
-	docker run -it \
-		--name $(CONTAINER_NAME) \
-		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
-		-w $(CONTAINER_WORKDIR) \
-		-p 8888:8888 \
-		$(IMAGE_NAME)
+	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME)
 
-# Bash dentro do container (ou novo efêmero se não existir)
+# Acessa o bash dentro do container
 login:
-	docker exec -it $(CONTAINER_NAME) bash || \
-	docker run -it --name $(CONTAINER_NAME) \
-		-v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" \
-		-w $(CONTAINER_WORKDIR) \
-		-p 8888:8888 \
-		$(IMAGE_NAME) bash
+	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME) bash
 
-# Parar e remover container
+# Parar (inútil em containers interativos efêmeros)
 stop:
-	docker stop $(CONTAINER_NAME) || exit 0
-	docker rm $(CONTAINER_NAME) || exit 0
+	@echo "Use Ctrl+C para parar o container."
 
-# Reinicia container
+# Reiniciar
 restart:
 	make stop
 	make start
 
-# Logs do container
+# Logs não aplicáveis
 watch-logs:
-	docker logs -f $(CONTAINER_NAME)
+	@echo "Logs indisponíveis com container efêmero."
 
 # Lint
 lint:
@@ -53,7 +45,6 @@ lint-fix:
 	black .
 	flake8 .
 
-# Execução local
 extract:
 	python src/extract/extract_clientes.py
 	python src/extract/extract_transacoes.py
@@ -63,10 +54,27 @@ transform:
 
 run: extract transform
 
-# Verifica __init__.py
 check-init:
 	@echo Verificando __init__.py nos pacotes...
 	@if not exist src\__init__.py (echo ❌ src\__init__.py faltando! & exit /b 1)
 	@if not exist src\extract\__init__.py (echo ❌ src\extract\__init__.py faltando! & exit /b 1)
 	@if not exist src\transform\__init__.py (echo ❌ src\transform\__init__.py faltando! & exit /b 1)
 	@echo ✅ Todos os __init__.py estão presentes!
+
+# Comandos Kafka
+kafka-produce:
+	python kafka_pipeline.py --mode produce
+
+kafka-consume:
+	python kafka_pipeline.py --mode consume
+
+kafka-pipeline:
+	python kafka_pipeline.py --mode both
+
+# Webservice Kafka
+kafka-webservice:
+	python -m src.kafka.webservice
+
+kafka-webservice-docker:
+	docker-compose up -d
+	docker exec -it $(CONTAINER_NAME) python -m src.kafka.webservice

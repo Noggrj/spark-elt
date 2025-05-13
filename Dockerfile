@@ -5,7 +5,7 @@ WORKDIR /home/jovyan/work
 
 # Instala dependências adicionais
 RUN pip install --no-cache-dir pyspark faker numpy pandas polars \
-    flake8 isort black
+    flake8 isort black kafka-python confluent-kafka flask
 
 # Garante que o Python encontre a pasta src/ como pacote
 ENV PYTHONPATH=/home/jovyan/work
@@ -14,4 +14,4 @@ ENV PYTHONPATH=/home/jovyan/work
 COPY . .
 
 # Executa o script como módulo (forma correta para pacotes Python)
-CMD ["/opt/conda/bin/python", "-m", "spark-processing.py"]
+CMD ["/opt/conda/bin/python", "kafka_pipeline.py"]
