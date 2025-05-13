@@ -71,3 +71,11 @@ kafka-consume:
 
 kafka-pipeline:
 	python kafka_pipeline.py --mode both
+
+# Webservice Kafka
+kafka-webservice:
+	python -m src.kafka.webservice
+
+kafka-webservice-docker:
+	docker-compose up -d
+	docker exec -it $(CONTAINER_NAME) python -m src.kafka.webservice

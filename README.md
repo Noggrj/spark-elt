@@ -1,7 +1,7 @@
 
-# 🚀 Projeto ELT com PySpark
+# 🚀 Projeto ELT com PySpark, Kafka e Streaming
 
-Este projeto é uma pipeline de **Extração, Validação e Transformação (ELT)** construída com Python e PySpark, organizada em um contêiner Docker. A arquitetura está dividida em camadas (`extract` e `transform`) e segue boas práticas de modularização e escalabilidade para processar grandes volumes de dados.
+Este projeto é uma pipeline completa de **Extração, Carregamento e Transformação (ELT)** construída com Python, PySpark e Apache Kafka, organizada em contêineres Docker. A arquitetura implementa um fluxo de dados em tempo real, dividida em camadas (`extract`, `transform` e `kafka`), seguindo boas práticas de modularização e escalabilidade para processar grandes volumes de dados em streaming.
 
 ---
 
@@ -32,10 +32,14 @@ Este projeto é uma pipeline de **Extração, Validação e Transformação (ELT
 
 - [Python 3.11+](https://www.python.org/)
 - [Apache Spark 3+ (via PySpark)](https://spark.apache.org/)
+- [Apache Kafka](https://kafka.apache.org/) - Plataforma de streaming distribuído
+- [Zookeeper](https://zookeeper.apache.org/) - Coordenação de serviços distribuídos
+- [Flask](https://flask.palletsprojects.com/) - Framework web para API REST
 - [Pandas](https://pandas.pydata.org/)
 - [Faker](https://faker.readthedocs.io/)
-- [Docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/) e [Docker Compose](https://docs.docker.com/compose/)
 - [Jupyter Base Notebook (imagem Docker)](https://hub.docker.com/r/jupyter/pyspark-notebook)
+
 
 ---
 
@@ -128,7 +132,25 @@ Você pode gerar os requisitos do container com:
 docker run -it pyspark-custom pip freeze > requirements.txt
 ```
 
----
+## 🌐 Webservice Kafka
+
+O projeto agora inclui um webservice para interagir com o Kafka através de uma API REST.
+
+### Endpoints disponíveis:
+
+- `GET /`: Página inicial com informações sobre os endpoints
+- `GET /status`: Verifica o status da conexão com o Kafka
+- `GET /mensagens/{topico}`: Obtém as últimas mensagens de um tópico
+- `POST /publicar/{topico}`: Publica uma mensagem em um tópico
+
+### Executando o webservice:
+
+```bash
+# Localmente
+make kafka-webservice
+
+# Via Docker
+make kafka-webservice-docker
 
 ## 🧑‍💻 Autor
 
