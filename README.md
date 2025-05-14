@@ -1,5 +1,5 @@
 
-# 🚀 Projeto ELT com PySpark, Kafka e Streaming
+# 🚀 Projeto ELT com PySpark, Kafka, AirFlow e Streaming
 
 Este projeto implementa uma arquitetura moderna de streaming de dados voltada para o processamento em tempo real de transações financeiras simuladas. Ele integra tecnologias robustas e escaláveis como **Apache Kafka**, **Apache Spark (PySpark)** e **Apache Airflow**, proporcionando uma pipeline eficiente e modular para ingestão, transformação e orquestração de dados transacionais.
 
