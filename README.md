@@ -5,10 +5,10 @@ Este projeto implementa uma arquitetura moderna de streaming de dados voltada pa
 
 ## 🏗️ Arquitetura
 O projeto é composto por:
-- **Geração de dados**: Módulo para gerar dados simulados de clientes e transações
-- **Kafka**: Middleware de mensageria para streaming de dados
-- **Spark**: Engine de processamento para transformação dos dados
-- **Airflow**: Orquestrador de fluxos de trabalho para automação de tarefas
+- **Geração de dados**: Módulo para gerar dados simulados de clientes e transações.
+- **Kafka**: Middleware de mensageria para streaming de dados.
+- **Spark**: Engine de processamento para transformação dos dados.
+- **Airflow**: Orquestrador de pipelines.
  
 ![Arquitetura do Projeto](images/elt-realtime.png)
 
@@ -90,20 +90,6 @@ Esses arquivos são validados antes da transformação com Spark:
 
 ---
 
-## 🔄 Pipeline
-
-### 🔹 Etapa Extract (pandas)
-- Valida dados brutos com `pandas`
-- Verifica integridade e estrutura dos arquivos
-
-### 🔸 Etapa Transform (PySpark)
-- Cria colunas derivadas (`ano`, `mês`, `faixa_etaria`)
-- Agrega dados por categoria, cidade e cliente
-- Executa consultas SQL no Spark
-
----
-
-
 ## 🧰 Comandos úteis (Makefile)
 
 ```bash
@@ -114,27 +100,8 @@ make lint-fix        # Aplica formatação com black, isort
 make check-init      # Verifica arquivos __init__.py nas pastas
 ```
 
-## 🌐 Webservice Kafka
-
-O projeto agora inclui um webservice para interagir com o Kafka através de uma API REST.
-
-### Endpoints disponíveis:
-
-- `GET /`: Página inicial com informações sobre os endpoints
-- `GET /status`: Verifica o status da conexão com o Kafka
-- `GET /mensagens/{topico}`: Obtém as últimas mensagens de um tópico
-- `POST /publicar/{topico}`: Publica uma mensagem em um tópico
-
-### Executando o webservice:
-
-```bash
-# Localmente
-make kafka-webservice
-
-# Via Docker
-make kafka-webservice-docker
-
 ## 🧑‍💻 Autor
+Matheus Nogueira. 
 
 ---
 
