@@ -14,4 +14,4 @@ ENV PYTHONPATH=/home/jovyan/work
 COPY . .
 
 # Executa o script como módulo (forma correta para pacotes Python)
-CMD ["/opt/conda/bin/python", "kafka_pipeline.py"]
+CMD ["/opt/conda/bin/python", "main.py"]
