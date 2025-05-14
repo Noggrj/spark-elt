@@ -1,29 +1,47 @@
 
 # 🚀 Projeto ELT com PySpark, Kafka e Streaming
 
-Este projeto é uma pipeline completa de **Extração, Carregamento e Transformação (ELT)** construída com Python, PySpark e Apache Kafka, organizada em contêineres Docker. A arquitetura implementa um fluxo de dados em tempo real, dividida em camadas (`extract`, `transform` e `kafka`), seguindo boas práticas de modularização e escalabilidade para processar grandes volumes de dados em streaming.
+Este projeto implementa uma arquitetura moderna de streaming de dados voltada para o processamento em tempo real de transações financeiras simuladas. Ele integra tecnologias robustas e escaláveis como **Apache Kafka**, **Apache Spark (PySpark)** e **Apache Airflow**, proporcionando uma pipeline eficiente e modular para ingestão, transformação e orquestração de dados transacionais.
 
----
+## 🏗️ Arquitetura
+O projeto é composto por:
+- **Geração de dados**: Módulo para gerar dados simulados de clientes e transações
+- **Kafka**: Middleware de mensageria para streaming de dados
+- **Spark**: Engine de processamento para transformação dos dados
+- **Airflow**: Orquestrador de fluxos de trabalho para automação de tarefas
+ 
+![Arquitetura do Projeto](images/elt-realtime.png)
 
 ## 📁 Estrutura do Projeto
 
 ```
 .
-├── Dockerfile
-├── Makefile
-├── start_spark.py               # Ponto de entrada para execução via Docker
-├── requirements.txt
-├── data/
-│   └── raw/                     # Contém os CSVs de entrada (clientes e transações)
-├── src/
-│   ├── __init__.py
-│   ├── extract/
-│   │   ├── __init__.py
-│   │   ├── extract_clientes.py
-│   │   └── extract_transacoes.py
-│   └── transform/
-│       ├── __init__.py
-│       └── spark_processing.py
+├── README.md                         # Documentação do projeto
+├── requirements.txt                  # Dependências principais
+├── requirements-airflow.txt          # Dependências específicas para o Airflow
+├── docker-compose.yml                # Orquestração dos serviços com Docker
+├── Dockerfile                        # Container base do projeto
+├── Dockerfile.airflow                # Container específico do Airflow
+├── Makefile                          # Automação de comandos úteis
+├── main.py                           # Script principal para execução do pipeline
+├── .dockerignore
+├── .gitignore
+│
+├── dags/                             # DAGs do Apache Airflow
+├── config/                           # Arquivos de configuração
+├── Data/                             # Diretório para arquivos de entrada
+├── extract/                          # Scripts de extração de dados
+├── transform/                        # Transformações com PySpark
+├── generator/                        # Geração de dados simulados
+├── kafka_module/                     # Módulos e utilitários Kafka
+├── pipeline/                         # Orquestração e lógica do pipeline
+├── plugins/                          # Plugins adicionais (Airflow ou outros)
+├── notebooks/                        # Análises exploratórias e testes
+├── utils/                            # Funções auxiliares e comuns
+├── logs/                             # Logs gerados durante a execução
+├── images/                           # Imagens para documentação (ex: arquitetura)
+└── venv/                             # Ambiente virtual Python (local)
+
 ```
 
 ---
@@ -33,6 +51,7 @@ Este projeto é uma pipeline completa de **Extração, Carregamento e Transforma
 - [Python 3.11+](https://www.python.org/) - Linguagem de programação principal
 - [Apache Spark 3+ (via PySpark)](https://spark.apache.org/) - Framework de processamento distribuído
 - [Apache Kafka](https://kafka.apache.org/) - Plataforma de streaming distribuído
+- [Apache Airflow](https://airflow.apache.org/) - orquestração e automação de workflows. 
 - [Kafka UI](https://github.com/provectuslabs/kafka-ui) - Interface visual para gerenciamento do Kafka
 - [Pandas](https://pandas.pydata.org/) - Biblioteca para análise de dados
 - [Faker](https://faker.readthedocs.io/) - Geração de dados sintéticos para testes

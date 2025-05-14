@@ -11,28 +11,32 @@ HOST_WORKDIR=$(shell cd && pwd)
 
 # Comando para build da imagem
 build:
-	docker build -t $(IMAGE_NAME) .
+	@echo " Limpando pasta logs..."
+	@if exist logs rmdir /s /q logs
+	@mkdir logs
+	@echo " Construindo imagem Docker $(IMAGE_NAME)..."
+	docker build --no-cache -t $(IMAGE_NAME) .
 
-# Inicia o container com montagem de volume correta
+# Inicia o container com Docker Compose
 start:
-	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME)
+	docker-compose up
 
 # Acessa o bash dentro do container
 login:
-	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME) bash
+	docker exec -it $(CONTAINER_NAME) bash
 
-# Parar (inútil em containers interativos efêmeros)
+# Parar os serviços
 stop:
-	@echo "Use Ctrl+C para parar o container."
+	docker-compose down
 
 # Reiniciar
 restart:
-	make stop
-	make start
+	docker-compose down
+	docker-compose up
 
-# Logs não aplicáveis
+# Ver logs
 watch-logs:
-	@echo "Logs indisponíveis com container efêmero."
+	docker-compose logs -f
 
 # Lint
 lint:
@@ -46,35 +50,48 @@ lint-fix:
 	flake8 .
 
 extract:
-	python src/extract/extract_clientes.py
-	python src/extract/extract_transacoes.py
+	python extract/clientes.py
+	python extract/transacoes.py
 
 transform:
-	python src/transform/spark_processing.py
+	python transform/spark_processing.py
 
 run: extract transform
 
 check-init:
 	@echo Verificando __init__.py nos pacotes...
-	@if not exist src\__init__.py (echo ❌ src\__init__.py faltando! & exit /b 1)
-	@if not exist src\extract\__init__.py (echo ❌ src\extract\__init__.py faltando! & exit /b 1)
-	@if not exist src\transform\__init__.py (echo ❌ src\transform\__init__.py faltando! & exit /b 1)
+	@if not exist extract\__init__.py (echo ❌ extract\__init__.py faltando! & exit /b 1)
+	@if not exist transform\__init__.py (echo ❌ transform\__init__.py faltando! & exit /b 1)
+	@if not exist kafka_module\__init__.py (echo ❌ kafka_module\__init__.py faltando! & exit /b 1)
 	@echo ✅ Todos os __init__.py estão presentes!
 
 # Comandos Kafka
 kafka-produce:
-	python kafka_pipeline.py --mode produce
+	python main.py --mode produce
 
 kafka-consume:
-	python kafka_pipeline.py --mode consume
+	python main.py --mode consume
 
 kafka-pipeline:
-	python kafka_pipeline.py --mode both
+	python main.py --mode both
 
 # Webservice Kafka
 kafka-webservice:
-	python -m src.kafka.webservice
+	python -m kafka_module.webservice
 
 kafka-webservice-docker:
 	docker-compose up -d
-	docker exec -it $(CONTAINER_NAME) python -m src.kafka.webservice
+	docker exec -it $(CONTAINER_NAME) python -m kafka_module.webservice
+
+# Comandos Airflow
+airflow-init:
+	docker-compose up airflow-webserver airflow-scheduler -d
+
+airflow-stop:
+	docker-compose stop airflow-webserver airflow-scheduler postgres
+
+airflow-logs:
+	docker-compose logs -f airflow-webserver airflow-scheduler
+
+airflow-ui:
+	start http://localhost:8081
