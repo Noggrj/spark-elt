@@ -30,12 +30,14 @@ Este projeto é uma pipeline completa de **Extração, Carregamento e Transforma
 
 ## 🧱 Tecnologias Utilizadas
 
-- [Python 3.11+](https://www.python.org/)
-- [Apache Spark 3+ (via PySpark)](https://spark.apache.org/)
-- [Pandas](https://pandas.pydata.org/)
-- [Faker](https://faker.readthedocs.io/)
-- [Docker](https://www.docker.com/)
-- [Jupyter Base Notebook (imagem Docker)](https://hub.docker.com/r/jupyter/pyspark-notebook)
+- [Python 3.11+](https://www.python.org/) - Linguagem de programação principal
+- [Apache Spark 3+ (via PySpark)](https://spark.apache.org/) - Framework de processamento distribuído
+- [Apache Kafka](https://kafka.apache.org/) - Plataforma de streaming distribuído
+- [Kafka UI](https://github.com/provectuslabs/kafka-ui) - Interface visual para gerenciamento do Kafka
+- [Pandas](https://pandas.pydata.org/) - Biblioteca para análise de dados
+- [Faker](https://faker.readthedocs.io/) - Geração de dados sintéticos para testes
+- [Docker](https://www.docker.com/) - Containerização da aplicação
+- [Jupyter Base Notebook (imagem Docker)](https://hub.docker.com/r/jupyter/pyspark-notebook) - Ambiente interativo
 
 ---
 
