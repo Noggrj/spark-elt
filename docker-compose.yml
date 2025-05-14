@@ -41,22 +41,6 @@ services:
     environment:
       - BOOTSTRAP_SERVERS=kafka:29092
     command: python kafka_pipeline.py --bootstrap-servers kafka:29092
-
-  webservice:
-    image: pyspark-custom
-    depends_on:
-      kafka:
-        condition: service_healthy
-    volumes:
-      - ./:/home/jovyan/work
-    working_dir: /home/jovyan/work
-    ports:
-      - "5000:5000"
-    environment:
-      - BOOTSTRAP_SERVERS=kafka:29092
-      - FLASK_APP=src.kafka.webservice
-      - FLASK_ENV=development
-    command: python -m src.kafka.webservice
   
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
