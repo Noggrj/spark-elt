@@ -2,49 +2,49 @@
 IMAGE_NAME=pyspark-custom
 CONTAINER_NAME=pyspark-container
 
-# Caminho interno padrão da imagem jupyter/pyspark-notebook
+# Caminhos
 CONTAINER_WORKDIR=/home/jovyan/work
+HOST_WORKDIR=$(shell cd)
 
-# Caminho absoluto do host (ajustado para Windows)
-HOST_WORKDIR=$(CURDIR)
+# Caminho absoluto seguro do host (resolvido em tempo de execução)
+HOST_WORKDIR=$(shell cd && pwd)
 
-# Build da imagem
+# Comando para build da imagem
 build:
 	docker build -t $(IMAGE_NAME) .
 
-# Inicia os containers com docker-compose
+# Inicia o container com montagem de volume correta
 start:
-	docker-compose up -d
+	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME)
 
-# Para e remove os containers com docker-compose
-stop:
-	docker-compose down
-
-# Acessa o bash no container existente (ou em novo efêmero se não existir)
+# Acessa o bash dentro do container
 login:
-	docker exec -it $(CONTAINER_NAME) bash || docker run -it --name $(CONTAINER_NAME) -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -w $(CONTAINER_WORKDIR) -p 8888:8888 $(IMAGE_NAME) bash
+	docker run -it -v "$(HOST_WORKDIR):$(CONTAINER_WORKDIR)" -p 8888:8888 $(IMAGE_NAME) bash
 
-# Reiniciar container
+# Parar (inútil em containers interativos efêmeros)
+stop:
+	@echo "Use Ctrl+C para parar o container."
+
+# Reiniciar
 restart:
 	make stop
 	make start
 
-# Logs do container nomeado
+# Logs não aplicáveis
 watch-logs:
-	docker-compose logs -f
+	@echo "Logs indisponíveis com container efêmero."
 
-# Checagem de código
+# Lint
 lint:
 	isort . --check-only
 	flake8 .
 
-# Correções automáticas
+# Fix lint
 lint-fix:
 	isort .
 	black .
 	flake8 .
 
-# Execução local sem Docker
 extract:
 	python src/extract/extract_clientes.py
 	python src/extract/extract_transacoes.py
@@ -54,7 +54,6 @@ transform:
 
 run: extract transform
 
-# Verificação dos __init__.py
 check-init:
 	@echo Verificando __init__.py nos pacotes...
 	@if not exist src\__init__.py (echo ❌ src\__init__.py faltando! & exit /b 1)
