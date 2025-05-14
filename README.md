@@ -1,7 +1,7 @@
 
-# 🚀 Projeto ELT com PySpark
+# 🚀 Projeto ELT com PySpark, Kafka e Streaming
 
-Este projeto é uma pipeline de **Extração, Validação e Transformação (ELT)** construída com Python e PySpark, organizada em um contêiner Docker. A arquitetura está dividida em camadas (`extract` e `transform`) e segue boas práticas de modularização e escalabilidade para processar grandes volumes de dados.
+Este projeto é uma pipeline completa de **Extração, Carregamento e Transformação (ELT)** construída com Python, PySpark e Apache Kafka, organizada em contêineres Docker. A arquitetura implementa um fluxo de dados em tempo real, dividida em camadas (`extract`, `transform` e `kafka`), seguindo boas práticas de modularização e escalabilidade para processar grandes volumes de dados em streaming.
 
 ---
 
@@ -47,29 +47,12 @@ Este projeto é uma pipeline de **Extração, Validação e Transformação (ELT
 make build
 ```
 
-Ou manualmente:
-
-```bash
-docker build -t pyspark-custom .
-```
-
-### 2. Execução do pipeline
+### 2. Inicie os serviços e Execute o Pipeline
 
 ```bash
 make start
 ```
-
-Ou diretamente:
-
-```bash
-docker run -it \
-  -v "$(pwd):/home/jovyan/work" \
-  -w /home/jovyan/work \
-  -p 8888:8888 \
-  pyspark-custom
-```
-
----
+### 3. Verifique os logs
 
 ## 📂 Fontes de Dados
 
@@ -99,14 +82,6 @@ Esses arquivos são validados antes da transformação com Spark:
 
 ---
 
-## 🧪 Testar validação manual
-
-```bash
-python -m src.extract.extract_clientes
-python -m src.extract.extract_transacoes
-```
-
----
 
 ## 🧰 Comandos úteis (Makefile)
 
@@ -118,22 +93,27 @@ make lint-fix        # Aplica formatação com black, isort
 make check-init      # Verifica arquivos __init__.py nas pastas
 ```
 
----
+## 🌐 Webservice Kafka
 
-## 📄 Requisitos
+O projeto agora inclui um webservice para interagir com o Kafka através de uma API REST.
 
-Você pode gerar os requisitos do container com:
+### Endpoints disponíveis:
+
+- `GET /`: Página inicial com informações sobre os endpoints
+- `GET /status`: Verifica o status da conexão com o Kafka
+- `GET /mensagens/{topico}`: Obtém as últimas mensagens de um tópico
+- `POST /publicar/{topico}`: Publica uma mensagem em um tópico
+
+### Executando o webservice:
 
 ```bash
-docker run -it pyspark-custom pip freeze > requirements.txt
-```
+# Localmente
+make kafka-webservice
 
----
+# Via Docker
+make kafka-webservice-docker
 
 ## 🧑‍💻 Autor
-
-Desenvolvido por [Seu Nome]  
-📧 seu.email@exemplo.com
 
 ---
 
